@@ -1,0 +1,15 @@
+header {
+	width:auto;
+	height:100px;
+	background-color:orange;
+}
+
+body{
+	background-color:gray;
+}
+
+footer{
+	padding:25px 0px;/*Marge verticale*/
+	background-color:#59719A; /*Couleur de fond*/
+	text-align:center;/*texte centré*/
+}
