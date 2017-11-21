@@ -1,15 +1,152 @@
-header {
-	width:auto;
-	height:100px;
+﻿/* Eléments principaux de la page */
+
+body
+{
+    background: url('images/fond_jaune.png');
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+}
+
+#wrapper
+{
+    width: 900px;
+    margin: auto;
+	background-color:#DEF3F4;
+}
+
+section h1, footer h1, nav a
+{
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+	text-align:center;
+	 font-size: 2.5em;
+}
+
+/* Header */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 	background-color:orange;
 }
 
-body{
-	background-color:gray;
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
 }
 
-footer{
-	padding:25px 0px;/*Marge verticale*/
-	background-color:#59719A; /*Couleur de fond*/
-	text-align:center;/*texte centré*/
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 59px;
+    height: 60px;
+}
+
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 0.9em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+
+/* Bannière */
+
+#banniere_image
+{
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('banniere.jpg') no-repeat;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+/* Corps */
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+article
+{
+    text-align: justify;
+}
+
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+article p
+{
+    font-size: 1.5em;
+	text-align:center;
+}
+
+
+.bouton
+{
+float: center;
+text-align: center;
+}
+
+.tailleBouton
+{
+	width:300px;
+	height:100px;
+	font-size:25px;
+	border-radius:20px;
+}
+
+.tailleBouton:hover
+{
+float: center;
+text-align: center;
+background-color:orange;
+}
+
+/* Footer */
+
+footer
+{
+    background-color:orange;
+    padding-top: 5px;
+	text-align: center;
+    font-size: 0.7em;
+	text-align: center;
 }
