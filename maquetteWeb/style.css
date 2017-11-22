@@ -1,5 +1,5 @@
 ﻿/* Eléments principaux de la page */
-
+/* 873 * 1224 */
 body
 {
     background: url('images/fond_jaune.png');
@@ -9,9 +9,10 @@ body
 
 #wrapper
 {
-    width: 900px;
+    width: 873px;
+	height : 1224px;
     margin: auto;
-	background-color:#DEF3F4;
+	background: url('frigo.jpg');
 }
 
 section h1, footer h1, nav a
@@ -149,4 +150,7 @@ footer
 	text-align: center;
     font-size: 0.7em;
 	text-align: center;
+	position:absolute;
+	top:1224px;
+	width:650px;
 }
