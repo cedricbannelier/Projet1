@@ -1,0 +1,2 @@
+-- Permet d'afficher le % de votant
+select reponse,100*nbVotant/(select sum(nbVotant)from comprend p where p.numSondage=1) as '%' from comprend p,choix c where c.numSondage=1 and p.numSondage=1 and p.numChoix=c.numChoix
