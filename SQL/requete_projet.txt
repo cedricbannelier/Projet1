@@ -1,2 +1,14 @@
--- Permet d'afficher le % de votant
+-- Permet d'afficher le % de votant OLD
 select reponse,100*nbVotant/(select sum(nbVotant)from comprend p where p.numSondage=1) as '%' from comprend p,choix c where c.numSondage=1 and p.numSondage=1 and p.numChoix=c.numChoix
+
+
+-- Permet de sortir le nombre de vote de chaque choix d'un sondage particulier
+select count(nomChoix),nomChoix, c.numchoix from Choix c, Vote v where numSondage=1 and v.numChoix=c.numChoix group by v.numchoix
+
+
+-- Permet de conte le nombre total de vote pour un sondage
+select count(nomChoix)as zz from Choix c, Vote v where numSondage=1 and v.numChoix=c.numChoix 
+
+-- Permet d'afficher le % de votant
+select 100*count(nomChoix)/(select  count(nomChoix)as zz from Choix c, Vote v where numSondage=1 and v.numChoix=c.numChoix ),nomChoix, c.numchoix from Choix c, Vote v where numSondage=1 and v.numChoix=c.numChoix group by v.numchoix
+
