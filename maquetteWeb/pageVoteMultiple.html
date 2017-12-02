@@ -10,7 +10,7 @@
             <header>
                 <div id="titre_principal">
                     <div id="logo">
-                        <a href="index.html"><img src="./logos/logo.png" alt="Logo DCSondage"> </a>
+                        <a href="index.html"> <img src="./logos/logo.png" alt="Logo DCSondage"></a>
                     </div>
                  </div>
                 <nav>
@@ -25,13 +25,25 @@
             <div id="banniere_image">
                 
             </div>
+			
             <section>
                 <article>
-                    <h1>Bienvenue sur le site DC Sondage</h1>
-                    <p>Ici vous pourrez créer votre sondage sans iden</p>
 
+					<input type="text" name="titreSondage" id="titreSondage" value="Titre de votre sondage" onfocus="this.value='';" onblur="if(this.value=='')this.value='Titre de votre sondage';" /><br />
+	 
+					<p class="pSondage">Afficher le choix si multipe ou simple, dans cette exemple multiple</p>
+					<input type="checkbox" name="auto" id="auto" />
+					<label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix1</label></br>
+										<input type="checkbox" name="auto" id="auto" />
+					<label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix2</label></br>
+										<input type="checkbox" name="auto" id="auto" />
+					<label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix3</label></br>
+					
 					<div class="boutonIndex">
-						<a href="creationSondage.html"><input type="button" value="Création du sondage" class="tailleBoutonIndex"></a>
+						<input type="button" value="Generer le sondage" class="tailleBoutonIndex" href="lien"/>
+					</div>
+					<div class="boutonIndex">
+						<input type="button" value="Effacer valeur" class="tailleBoutonIndex" href="lien"/>
 					</div>
 
 				</article>

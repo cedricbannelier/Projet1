@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>SC Sondage</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <a href="index.html"> <img src="./logos/logo.png" alt="Logo DCSondage"></a>
+                    </div>
+                 </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#">Se connecter</a></li>
+                        <li><a href="#">S'enregistrer</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <div id="banniere_image">
+                
+            </div>
+			
+            <section>
+                <article>
+
+					<input type="text" name="titreSondage" id="titreSondage" value="Titre de votre sondage" onfocus="this.value='';" onblur="if(this.value=='')this.value='Titre de votre sondage';" /><br />
+	 
+					<p class="pSondage">Choix du mode du sondage :</p>
+					<input type="radio" name="auto" id="auto" />
+					<label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix multiple</label></br>
+					
+					<input type="radio" name="auto" id="auto" />
+					<label for="auto" class="label_cote" title="Une seule réponse possible">Choix unique</label>
+					
+					<p class="pSondage">Saisir les réponses possibles :</p>
+					<input type="text" name="Choix" id="Choix" value="Choix1" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix1';" /><br />
+					<input type="text" name="Choix" id="Choix" value="Choix2" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix2';" /><br />
+					<input type="text" name="Choix" id="Choix" value="Choix3" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix3';" /><br />
+				
+					<div class="boutonIndex">
+						<input type="button" value="Generer le sondage" class="tailleBoutonIndex" href="lien"/>
+					</div>
+					<div class="boutonIndex">
+						<input type="button" value="Effacer valeur" class="tailleBoutonIndex" href="lien"/>
+					</div>
+
+				</article>
+            </section>
+            <footer>
+                        <a href="#">Contact</a>
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Politique d'accessibilité</a>
+            </footer>
+        </div>
+    </body>
+</html>

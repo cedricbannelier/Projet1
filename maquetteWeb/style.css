@@ -1,18 +1,15 @@
 ﻿/* Eléments principaux de la page */
-/* 873 * 1224 */
 body
 {
-    background: url('images/fond_jaune.png');
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    color: #181818;
 }
 
 #wrapper
 {
-    width: 873px;
-	height : 1224px;
+    width: 100%;
+	height : 100%;
     margin: auto;
-//	background: url('frigo.jpg');
+	background-color:#CCCDCD;
 }
 
 section h1, footer h1, nav a
@@ -31,10 +28,9 @@ header
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-	background-color:orange;
-	width:515px;
-	height:45px;
-	left:180px;
+	background-color:gray;
+	width:100%;
+//	height:45px;
 }
 
 #titre_principal
@@ -83,22 +79,21 @@ nav a:hover
     border-bottom: 3px solid #760001;
 }
 
-.para
+/* supprime le trait en dessous des liens */
+a
 {
-	color:red;
+	text-decoration:none;
 }
-
 
 /* Bannière */
 
 #banniere_image
 {
-    margin-top: 15px;
-    height: 200px;
-    border-radius: 5px;
-    background: url('banniere.jpg') no-repeat;
-    position: relative;
-    margin-bottom: 25px;
+    height: 137px;
+    background: url('./logos/dcS_White_Transparent.png') no-repeat;
+	background-position:center center;
+	margin :auto;
+	width:100%;
 }
 
 
@@ -127,17 +122,19 @@ article p
 	text-align:center;
 }
 
+.pSondage
+{
+		text-align:left;
+		  font-size: 1.1em;
+}
 
-.bouton
+.boutonIndex
 {
 	float: center;
 	text-align: center;
-	position:relative;
-	width:750px;
-	left:50px;
 }
 
-.tailleBouton
+.tailleBoutonIndex
 {
 	width:300px;
 	height:100px;
@@ -145,22 +142,40 @@ article p
 	border-radius:20px;
 }
 
-.tailleBouton:hover
+.tailleBoutonIndex:hover
 {
 	float: center;
 	text-align: center;
 	background-color:orange;
 }
 
+#titreSondage
+{
+	width:30%;
+}
+
 /* Footer */
 
 footer
 {
-    background-color:orange;
+    background-color:gray;
     padding-top: 5px;
 	text-align: center;
     font-size: 0.7em;
 	text-align: center;
-	width:515px;
-	left:180px;
+	width:100%;
+}
+
+.pie::before {
+  content: ’’;
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+}
+
+.pie {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: yellowgreen;
+  background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
