@@ -1,7 +1,7 @@
 ﻿/* Eléments principaux de la page */
 body
 {
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-family: Tahoma, Arial, sans-serif;
 }
 
 #wrapper
@@ -14,7 +14,7 @@ body
 
 section h1, footer h1, nav a
 {
-    font-family: Tahoma, serif;
+    font-family: Tahoma, Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
 	text-align:center;
