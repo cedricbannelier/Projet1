@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
+<!--		<script src="java.js" type="text/javascript"></script> -->
         <title>SC Sondage</title>
     </head>
     <body>
@@ -19,11 +20,10 @@
                         <li><a href="#">Se connecter</a></li>
                         <li><a href="#">S'enregistrer</a></li>
                     </ul>
-										<form action="" class="formulaire">
-               <input class="champ" type="text" value="Rechercher"/>
-                    <input class="bouton" type="button" value=" Loupe " />
-                     
-                </form>
+						<form action="" class="formulaire">
+							<input class="champ" type="text" value="Rechercher" onfocus="this.value=''" onblur="if(this.value=='')this.value='Rechercher';";/>
+							<input class="bouton" type="button" value=" Loupe " />
+						</form>
                 </nav>
             </header>
             
