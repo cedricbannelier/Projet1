@@ -166,9 +166,14 @@ footer
 	width:100%;
 }
 
-@media all and (max-width: 960px) {
+@media only screen and (max-width: 960px) {
     #banniere_image {
-		display: none;
+/*		display: none;*/
+	background: url('./logos/dcS_black_Transparent1.png') no-repeat;
+    height: 137px;
+	background-position:center center;
+	margin :auto;
+	width:100%;
 	}
     
 }
