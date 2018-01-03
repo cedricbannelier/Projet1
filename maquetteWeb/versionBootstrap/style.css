@@ -1,0 +1,60 @@
+﻿/* Eléments principaux de la page */
+body
+{
+    font-family: Tahoma, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.btn.btn-outline-success{
+	border-color:orange;
+	color:orange;
+}
+
+.btn.btn-outline-success:hover{
+	background-color:orange;
+	color:white;
+	border-color:white;
+}
+
+.navbar-nav:hover{
+	color:orange;
+	
+}
+
+.form-group{
+	width: 300px;
+/*	box-shadow: 10px 5px 5px red;*/
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 2px 2px 2px 2px orange;
+}
+
+.form-control.mr-sm-2:focus, textarea:focus{
+	box-shadow: 2px 2px 2px 2px orange;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.center{
+    margin:auto;
+    float:none;  /* annule le float:left de bootstrap*/
+}
+
+/*Test pour le responsive */
+
+@media only screen and (max-width: 960px) {
+    #banniere_image {
+/*		display: none;*/
+	background: url('./logos/dcS_black_Transparent1.png') no-repeat;
+    height: 137px;
+	background-position:center center;
+	margin :auto;
+	width:100%;
+	}
+    
+}
+
