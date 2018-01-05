@@ -12,3 +12,7 @@ select count(nomChoix)as zz from Choix c, Vote v where numSondage=1 and v.numCho
 -- Permet d'afficher le % de votant
 select 100*count(nomChoix)/(select  count(nomChoix)as zz from Choix c, Vote v where numSondage=1 and v.numChoix=c.numChoix ),nomChoix, c.numchoix from Choix c, Vote v where numSondage=1 and v.numChoix=c.numChoix group by v.numchoix
 
+
+-- Selection du dernier INSERT
+INSERT INTO producteur VALUES ("","Cedric1");
+SELECT DISTINCT(LAST_INSERT_ID()) FROM producteur;
