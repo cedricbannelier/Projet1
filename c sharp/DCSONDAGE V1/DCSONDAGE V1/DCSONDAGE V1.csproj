@@ -126,11 +126,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LiensController.cs" />
     <Compile Include="Controllers\SubmitController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Choix.cs" />
+    <Compile Include="Models\BDD.cs" />
     <Compile Include="Models\Lien.cs" />
     <Compile Include="Models\Sondage.cs" />
     <Compile Include="Models\Votant.cs" />
@@ -144,6 +147,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Home\Creation.cshtml" />
+    <Content Include="Views\Test\Test.cshtml" />
+    <Content Include="Views\Liens.cshtml" />
+    <Content Include="Views\Home\Liens.cshtml" />
+    <Content Include="Views\Home\Submit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,7 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Submit\" />
+    <Folder Include="Views\Liens\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -41,11 +41,11 @@
         <section>
             <article>
                 <form action="/Home/Submit" method="post">
-                    <input type="text" name="titreSondage" id="titreSondage" value="Titre de votre sondage" onfocus="this.value='';" onblur="if(this.value=='')this.value='Titre de votre sondage';" /><br />
+                    <input type="text" name="titreSondage" id="titreSondage" placeholder="Titre de votre sondage" onfocus="this.value='';" onblur="if(this.value=='')this.value='Titre de votre sondage';" /><br />
 
                     <p class="pSondage">Choix du mode du sondage :</p>
                     <input type="radio" name="RadioB" id="auto" value="0"/>
-                    <label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix multiple</label></br>
+                    <label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix multiple</label><br/>
 
                     <input type="radio" name="RadioB" id="auto" value="1" checked/>
                     <label for="auto" class="label_cote" title="Une seule réponse possible">Choix unique</label>
@@ -58,10 +58,10 @@
                     <input type="text" name="Choix5" id="Choix" placeholder="Choix5" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix5';" /><br />
 
                     <div class="boutonIndex">
-                        <input type="submit" value="Générer le sondage" class="tailleBoutonIndex" href="lien" />
-                    </div>
+                        <a href="/prout/"><input type="submit" value="Générer le sondage" class="tailleBoutonIndex" /></a>
+</div>
                     <div class="boutonIndex">
-                        <input type="button" value="Effacer valeur" class="tailleBoutonIndex" href="/Home/Creation/" />
+                        <a href="/Home/Creation/"><input type="button" value="Effacer valeur" class="tailleBoutonIndex"/></a>
                     </div>
                 </form>
             </article>
