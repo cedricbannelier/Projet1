@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/content/style.css" />
+    <title>SC Sondage</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="titre_principal">
+                <div id="logo">
+                    <a href="index.html"> <img src="./logos/logo.png" alt="Logo DCSondage"></a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Se connecter</a></li>
+                    <li><a href="#">S'enregistrer</a></li>
+                </ul>
+                <div id="recherche">
+                    <form action="" class="formulaire">
+                        <input class="champ" type="text" value="Recherche" onfocus="this.value='';" onblur="if(this.value=='')this.value='Recherche';" />
+                        <a href="#"><img src="loupe.png" height="15" width="15" alt="Loupe"> </a>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <div id="banniere_image">
+
+        </div>
+
+        <section>
+            <article>
+                <form action="/Home/Submit" method="post">
+                    <input type="text" name="titreSondage" id="titreSondage" value="Titre de votre sondage" onfocus="this.value='';" onblur="if(this.value=='')this.value='Titre de votre sondage';" /><br />
+
+                    <p class="pSondage">Choix du mode du sondage :</p>
+                    <input type="radio" name="RadioB" id="auto" value="0"/>
+                    <label for="auto" class="label_cote" title="Plusieurs réponses possible">Choix multiple</label></br>
+
+                    <input type="radio" name="RadioB" id="auto" value="1" checked/>
+                    <label for="auto" class="label_cote" title="Une seule réponse possible">Choix unique</label>
+
+                    <p class="pSondage">Saisir les réponses possibles :</p>
+                    <input type="text" name="Choix1" id="Choix" placeholder="Choix1" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix1';" /><br />
+                    <input type="text" name="Choix2" id="Choix" placeholder="Choix2" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix2';" /><br />
+                    <input type="text" name="Choix3" id="Choix" placeholder="Choix3" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix3';" /><br />
+                    <input type="text" name="Choix4" id="Choix" placeholder="Choix4" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix4';" /><br />
+                    <input type="text" name="Choix5" id="Choix" placeholder="Choix5" onfocus="this.value='';" onblur="if(this.value=='')this.value='Choix5';" /><br />
+
+                    <div class="boutonIndex">
+                        <input type="submit" value="Générer le sondage" class="tailleBoutonIndex" href="lien" />
+                    </div>
+                    <div class="boutonIndex">
+                        <input type="button" value="Effacer valeur" class="tailleBoutonIndex" href="/Home/Creation/" />
+                    </div>
+                </form>
+            </article>
+        </section>
+        <footer>
+            <a href="#">Contact</a>
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique d'accessibilité</a>
+        </footer>
+    </div>
+</body>
+</html>

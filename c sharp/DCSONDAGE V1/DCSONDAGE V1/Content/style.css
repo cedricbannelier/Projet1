@@ -1,0 +1,182 @@
+﻿/* Eléments principaux de la page */
+body
+{
+    font-family: Tahoma, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	}
+
+#wrapper
+{
+    width: 100%;
+	height : 100%;
+    margin: auto;
+	background-color:#CCCDCD;
+}
+
+section h1, footer h1, nav a
+{
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+	text-align:center;
+	font-size: 2.5em;
+}
+
+/* Header */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+	background-color:gray;
+	width:100%;
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 59px;
+    height: 60px;
+}
+
+/* Barre de recherche */
+#recherche
+{
+	list-style-type: none;
+    display: flex;
+}
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 0.9em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+/* supprime le trait en dessous des liens */
+a
+{
+	text-decoration:none;
+}
+
+/* Bannière */
+
+#banniere_image
+{
+    height: 137px;
+    background: url('./logos/dcS_White_Transparent.png') no-repeat;
+	background-position:center center;
+	margin :auto;
+	width:100%;
+}
+
+
+/* Corps */
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+article
+{
+    text-align: justify;
+}
+
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+article p
+{
+    font-size: 1.5em;
+	text-align:center;
+}
+
+.pSondage
+{
+		text-align:left;
+		  font-size: 1.1em;
+}
+
+.boutonIndex
+{
+	float: center;
+	text-align: center;
+}
+
+.tailleBoutonIndex
+{
+	width:300px;
+	height:100px;
+	font-size:25px;
+	border-radius:20px;
+}
+
+.tailleBoutonIndex:hover
+{
+	float: center;
+	text-align: center;
+	background-color:orange;
+}
+
+/* Footer */
+footer
+{
+    background-color:gray;
+    padding-top: 5px;
+	text-align: center;
+    font-size: 0.7em;
+	text-align: center;
+	width:100%;
+}
+
+/*Test pour le responsive */
+
+@media only screen and (max-width: 960px) {
+    #banniere_image {
+/*		display: none;*/
+	background: url('./logos/dcS_black_Transparent1.png') no-repeat;
+    height: 137px;
+	background-position:center center;
+	margin :auto;
+	width:100%;
+	}
+    
+}

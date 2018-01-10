@@ -1,0 +1,52 @@
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\ApplicationInsights.config
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\csc.exe
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\System.Collections.Immutable.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\vbc.exe
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe.config
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\DCSONDAGE V1.dll.config
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\DCSONDAGE V1.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\DCSONDAGE V1.pdb
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.Web.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.Web.Infrastructure.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Helpers.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Mvc.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Razor.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.Web.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Razor.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Helpers.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Mvc.xml
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Razor.resources.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Webpages.resources.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Deployment.resources.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Razor.resources.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Helpers.resources.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Mvc.resources.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.csprojResolveAssemblyReference.cache
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.dll
+c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.pdb
