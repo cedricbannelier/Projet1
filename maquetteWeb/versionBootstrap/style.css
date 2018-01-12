@@ -5,7 +5,9 @@ body
 	margin: 0;
 	padding: 0;
 }
-
+h3{
+	text-align:center;
+}
 .btn.btn-outline-success{
 	border-color:orange;
 	color:orange;
@@ -44,17 +46,38 @@ a:hover{
     float:none;  /* annule le float:left de bootstrap*/
 }
 
+ul {
+	 padding:0;
+	 margin:0;
+	 list-style-type:none;
+}
+
+li {
+	 margin-left:2px;
+	 float:left; /*pour IE*/
+}
+
+footer a{
+	font-size:12px;
+	text-decoration:none;
+	color:black;
+}
+
+footer a:hover{
+	color:orange;
+}
+
+.footer {
+	margin-top:100px;
+}
+
 /*Test pour le responsive */
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1200px) {
     #banniere_image {
-/*		display: none;*/
-	background: url('./logos/dcS_black_Transparent1.png') no-repeat;
-    height: 137px;
-	background-position:center center;
-	margin :auto;
-	width:100%;
-	}
-    
+    width: 100%;
+    height: auto;
 }
+    
+
 
