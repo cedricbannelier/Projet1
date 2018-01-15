@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<script src="java.js" type="text/javascript"></script>
-	</head>
-	<body class="container"> 
+    <head>
+        <meta charset="utf-8" />
+        <!-- Bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <!-- CSS perso -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="container"> 
 
-		<nav class="nav justify-content-center">
-			<form class="form-inline">
-			<ul class="nav">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Active</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-			</ul>
-				<input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-			</form>
-		</nav>	
-		
-<form>
-  <div class="form-group">
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Veuillez entrer votre choix 1">
-  </div>
-  <div class="form-group">
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Veuillez entrer votre choix 2">
-  </div>
-    <div class="form-group">
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Veuillez entrer votre choix 3">
-  </div>
-    <div class="form-group">
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Veuillez entrer votre choix 4">
-  </div>
-    <div class="form-group">
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Veuillez entrer votre choix 5">
-  </div>
-</form>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="index.html"><img src="logo.png" alt="Logo DCSondage"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-	<div class="form-check">
-		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-		<label class="form-check-label" for="defaultCheck1">
-		Default checkbox
-		</label>
-	</div>
-	<div class="form-check">
-		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-		<label class="form-check-label" for="defaultCheck1">
-		Default checkbox
-		</label>
-	</div>
-	<div class="form-check">
-		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-		<label class="form-check-label" for="defaultCheck1">
-		Default checkbox
-		</label>
-	</div>
-	<div class="form-check">
-		<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-		<label class="form-check-label" for="exampleRadios1">
-		Default radio
-		</label>
-	</div>
-	<div class="form-check">
-		<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-		<label class="form-check-label" for="exampleRadios1">
-		Default radio
-		</label>
-	</div>
-	<div class="form-check">
-		<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-		<label class="form-check-label" for="exampleRadios1">
-		Default radio
-		</label>
-	</div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">S'enregistrer</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
+            </div>
+        </nav>
+        <header>
+            <a href="index.html"><img src="dcS_White_Transparent.png" alt="Logo DCSondage" id="banniere_image"> </a>
+        </header>
 
-	<button type="button" class="btn btn-warning btn-block">Valider votre sondage</button>
-	
-	
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	</body>
+        <br/>
+        <h3>Veuillez selectionner au minimum un choix de réponse.</h3>
+        <p>Sondage choix multiple</p>
+        <br/>
+
+        <form>
+
+            <div class="row">		
+                <div class="form-group col-lg-3 center">
+
+                    <p>
+                        <input type="radio" id="Choix1" name="radioname">
+                        <label for="Choix1">Choix1</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="Choix2" name="radioname">
+                        <label for="Choix2">Choix2</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="Choix3" name="radioname">
+                        <label for="Choix3">Choix3</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="Choix4" name="radioname">
+                        <label for="Choix4">Choix4</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="Choix5" name="radioname">
+                        <label for="Choix5">Choix5</label>
+                    </p>
+
+                </div>
+            </div>
+        </form>
+
+        <button type="button" class="btn btn-warning btn-block">Confirmer le vote</button>
+
+        <footer class="form-group col-lg-5 center">
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique d'accessibilité</a></li>
+            </ul>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    </body>
 </html>

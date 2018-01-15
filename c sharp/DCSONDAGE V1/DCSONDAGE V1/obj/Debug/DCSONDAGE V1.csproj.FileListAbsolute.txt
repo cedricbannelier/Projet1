@@ -50,3 +50,4 @@ c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\
 c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.csprojResolveAssemblyReference.cache
 c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.dll
 c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.pdb
+E:\Programmation\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.csproj.CoreCompileInputs.cache
