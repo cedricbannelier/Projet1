@@ -7,11 +7,13 @@ namespace DCSONDAGE_V1.Models
 {
     public class Votant
     {
-        public String AdresseIp { get; set; }
+        public String adresseIp { get; set; }
+
+        public Int32 numVotant { get; set; }
 
         public Votant(string addIp)
         {
-            AdresseIp = addIp;
+            adresseIp = addIp;
         }
     }
 }

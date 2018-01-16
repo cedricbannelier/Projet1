@@ -7,11 +7,12 @@ namespace DCSONDAGE_V1.Models
 {
     public class Choix
     {
-        public String NomChoix { get; set; }
-
-        public Choix (string nomChoix)
+        public String nomChoix { get; set; }
+        public Int32 numChoix { get; set; }
+        public Int32 numSondage { get; set; }
+        public Choix (string nomduChoix)
         {
-            NomChoix = nomChoix;
+            nomChoix = nomduChoix;
         }
     }
 }

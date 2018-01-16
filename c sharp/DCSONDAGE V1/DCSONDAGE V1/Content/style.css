@@ -1,182 +1,181 @@
-﻿/* Eléments principaux de la page */
+﻿/* CSS Projet Dominik Cedric */
+
+/* Eléments principaux de la page */
 body
 {
     font-family: Tahoma, Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	}
-
-#wrapper
-{
-    width: 100%;
-	height : 100%;
-    margin: auto;
-	background-color:#CCCDCD;
+    margin: 0;
+    padding: 0;
+}
+h1,h3,p{
+    text-align:center;
+}
+.btn.btn-outline-success{
+    border-color:orange;
+    color:orange;
 }
 
-section h1, footer h1, nav a
-{
-    font-family: Tahoma, Arial, sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-	text-align:center;
-	font-size: 2.5em;
+.btn.btn-outline-success:hover{
+    background-color:orange;
+    color:white;
+    border-color:white;
 }
 
-/* Header */
-
-header
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-	background-color:gray;
-	width:100%;
+.navbar-nav:hover{
+    color:orange;
 }
 
-#titre_principal
-{
-    display: flex;
-    flex-direction: column;
+.form-group{
+    width: 300px;
+    /*	box-shadow: 10px 5px 5px red;*/
 }
 
-#logo
-{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+input[type=text]:focus, textarea:focus {
+    box-shadow: 2px 2px 2px 2px orange;
 }
 
-#logo img
-{
-    width: 59px;
-    height: 60px;
+.form-control.mr-sm-2:focus, textarea:focus{
+    box-shadow: 2px 2px 2px 2px orange;
 }
 
-/* Barre de recherche */
-#recherche
-{
-	list-style-type: none;
-    display: flex;
-}
-/* Navigation */
-
-nav ul
-{
-    list-style-type: none;
-    display: flex;
-}
-
-nav li
-{
-    margin-right: 15px;
-}
-
-nav a
-{
-    font-size: 0.9em;
-    color: #181818;
-    padding-bottom: 3px;
+a:hover{
     text-decoration: none;
 }
 
-nav a:hover
-{
-    color: #760001;
-    border-bottom: 3px solid #760001;
+.center{
+    margin: auto;
+    float: none;   /*annule le float:left de bootstrap */
 }
 
-/* supprime le trait en dessous des liens */
-a
-{
-	text-decoration:none;
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
-/* Bannière */
-
-#banniere_image
-{
-    height: 137px;
-    background: url('./logos/dcS_White_Transparent.png') no-repeat;
-	background-position:center center;
-	margin :auto;
-	width:100%;
+li {
+    margin-left:2px;
+    float:left; /*pour IE*/
 }
 
-
-/* Corps */
-
-section
-{
-    display: flex;
-    margin-bottom: 20px;
+footer a{
+    font-size:12px;
+    text-decoration:none;
+    color:black;
 }
 
-article
-{
-    text-align: justify;
+footer a:hover{
+    color:orange;
 }
 
-article
-{
-    margin-right: 20px;
-    flex: 3;
+/* Configuration des CheckBox */
+
+/* Cachons la case à cocher */
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
 }
 
-article p
-{
-    font-size: 1.5em;
-	text-align:center;
+/* on prépare le label */
+[type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+    position: relative; /* permet de positionner les pseudo-éléments */
+    padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
+    cursor: pointer;    /* affiche un curseur adapté */
 }
 
-.pSondage
-{
-		text-align:left;
-		  font-size: 1.1em;
+/* Aspect des checkboxes */
+/* :before sert à créer la case à cocher */
+[type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 17px; height: 17px; /* dim. de la case */
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 3px; /* angles arrondis */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
 }
 
-.boutonIndex
-{
-	float: center;
-	text-align: center;
+/* Aspect général de la coche */
+[type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+    content: '✘';
+    position: absolute;
+    top: 0; left: 4px;
+    font-size: 14px;
+    color: #FF8C00; /* couleur */
+    transition: all .2s; /* on prévoit une animation */
+}
+/* Aspect si "pas cochée" */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0; /* coche invisible */
+    transform: scale(0); /* mise à l'échelle à 0 */
+}
+/* Aspect si "cochée" */
+[type="checkbox"]:checked + label:after {
+    opacity: 1; /* coche opaque */
+    transform: scale(1); /* mise à l'échelle 1:1 */
 }
 
-.tailleBoutonIndex
-{
-	width:300px;
-	height:100px;
-	font-size:25px;
-	border-radius:20px;
+/* Fin de configuration des CheckBox */
+
+/* Configuration des radio */
+
+/* Cachons la case à cocher */
+[type="radio"]:not(:checked), [type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
 }
 
-.tailleBoutonIndex:hover
-{
-	float: center;
-	text-align: center;
-	background-color:orange;
+/* on prépare le label */
+[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+    position: relative; /* permet de positionner les pseudo-éléments */
+    padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
+    cursor: pointer;    /* affiche un curseur adapté */
 }
 
-/* Footer */
-footer
-{
-    background-color:gray;
-    padding-top: 5px;
-	text-align: center;
-    font-size: 0.7em;
-	text-align: center;
-	width:100%;
+/* Aspect des checkboxes */
+/* :before sert à créer la case à cocher */
+[type="radio"]:not(:checked) + label:before, [type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: 2px;
+    width: 17px; /* dim. de la case */
+    height: 17px; /* dim. de la case */
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 100%; /* angles arrondis */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
 }
+
+/* Aspect général de la coche */
+[type="radio"]:not(:checked) + label:after, [type="radio"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 0; 
+    left: 4px;
+    font-size: 14px;
+    color: #FF8C00; /* couleur */
+    transition: all .2s; /* on prévoit une animation */
+}
+/* Aspect si "pas cochée" */
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0; /* coche invisible */
+    transform: scale(0); /* mise à l'échelle à 0 */
+}
+/* Aspect si "cochée" */
+[type="radio"]:checked + label:after {
+    opacity: 1; /* coche opaque */
+    transform: scale(1); /* mise à l'échelle 1:1 */
+}
+
+/* Fin de configuration des CheckBox */
 
 /*Test pour le responsive */
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1200px) {
     #banniere_image {
-/*		display: none;*/
-	background: url('./logos/dcS_black_Transparent1.png') no-repeat;
-    height: 137px;
-	background-position:center center;
-	margin :auto;
-	width:100%;
-	}
-    
-}
+        width: 100%;
+        height: auto;
+    }
+

@@ -8,17 +8,20 @@ namespace DCSONDAGE_V1.Models
 {
     public class Sondage
     {
-        public String QuestionSondage { get; set; }
-        public Boolean ChoixUniqueSondage { get; set; }
+        public String questionSondage { get; set; }
+        public Boolean choixUniqueSondage { get; set; }
+        public Int32 numSondage { get; set; }
 
         public Sondage(string question, Boolean choix)
         {
-            QuestionSondage = question;
-            ChoixUniqueSondage = choix;
+            questionSondage = question;
+            choixUniqueSondage = choix;
         }
-        public static void AjoutSondage()
+        public Sondage(Int32 numC, String question, Boolean choix)
         {
-            
+            questionSondage = question;
+            choixUniqueSondage = choix;
+            numSondage = numC;
         }
     }
 }

@@ -126,14 +126,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LiensController.cs" />
-    <Compile Include="Controllers\SubmitController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\ResultatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Choix.cs" />
     <Compile Include="Models\BDD.cs" />
+    <Compile Include="Models\AfficheVote.cs" />
     <Compile Include="Models\Lien.cs" />
     <Compile Include="Models\Sondage.cs" />
     <Compile Include="Models\Votant.cs" />
@@ -150,7 +149,8 @@
     <Content Include="Views\Test\Test.cshtml" />
     <Content Include="Views\Liens.cshtml" />
     <Content Include="Views\Home\Liens.cshtml" />
-    <Content Include="Views\Home\Submit.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Resultat\VoteU.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

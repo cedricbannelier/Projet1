@@ -7,14 +7,21 @@ namespace DCSONDAGE_V1.Models
 {
     public class Lien
     {
-        public String AdresseLien1 { get; set; }
-        public String AdresseLien2 { get; set; }
-        public String AdresseLien3 { get; set; }
-        public Lien(String Adresse1, String Adresse2, String Adresse3)
+        public String adresseLien1 { get; set; }
+        public String adresseLien2 { get; set; }
+        public String adresseLien3 { get; set; }
+        public Guid Guidsuppression { get; set; }
+        public Int32 numSondage { get; set; }
+        public Lien(int numSondage)
         {
-            AdresseLien1 = Adresse1;
-            AdresseLien2 = Adresse2;
-            AdresseLien3 = Adresse3;
+            adresseLien1 = string.Format("/Resultat/VoteU/{0}", numSondage);  //vote
+            adresseLien2 = string.Format("/Resultat/resultat/{0}", numSondage);            // resultat
+            Guid SuppressionGuid = new Guid();
+            SuppressionGuid = Guid.NewGuid();
+            Guidsuppression = SuppressionGuid;
+            adresseLien3 = string.Format("/Resultat/Suppression/{0}", SuppressionGuid);          //  Suppression
+
         }
+
     }
 }

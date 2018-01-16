@@ -1,0 +1,51 @@
+D:\Projet1\DCSONDAGE V1\bin\ApplicationInsights.config
+D:\Projet1\DCSONDAGE V1\bin\roslyn\csc.exe
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projet1\DCSONDAGE V1\bin\roslyn\System.Collections.Immutable.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\vbc.exe
+D:\Projet1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe
+D:\Projet1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe.config
+D:\Projet1\DCSONDAGE V1\bin\DCSONDAGE V1.dll.config
+D:\Projet1\DCSONDAGE V1\bin\DCSONDAGE V1.dll
+D:\Projet1\DCSONDAGE V1\bin\DCSONDAGE V1.pdb
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.Web.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.Web.Infrastructure.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Helpers.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Mvc.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Razor.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.Web.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Razor.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Helpers.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Mvc.xml
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Razor.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Webpages.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Deployment.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Razor.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Helpers.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Mvc.resources.dll
+D:\Projet1\DCSONDAGE V1\obj\Release\DCSONDAGE V1.dll
+D:\Projet1\DCSONDAGE V1\obj\Release\DCSONDAGE V1.pdb

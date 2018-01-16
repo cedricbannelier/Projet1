@@ -1,4 +1,4 @@
-﻿
+﻿@model DCSONDAGE_V1.Models.Lien
 @{
     Layout = null;
 }
@@ -12,7 +12,9 @@
 </head>
 <body>
     <div> 
-        <h3> You have done it GG !!</h3>
+        <a href="@Model.adresseLien1"><h3>adresse de vote : @Model.adresseLien1</h3></a> 
+        <a href="@Model.adresseLien2"><h3>adresse de Resultat : @Model.adresseLien2 </h3></a>
+        <a href="@Model.adresseLien3"><h3>adresse de Supression : @Model.adresseLien3 </h3></a>
     </div>
 </body>
 </html>

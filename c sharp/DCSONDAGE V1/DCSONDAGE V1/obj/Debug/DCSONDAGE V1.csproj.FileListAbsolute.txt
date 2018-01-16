@@ -51,3 +51,107 @@ c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\
 c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.dll
 c:\users\adai06\documents\visual studio 2015\Projects\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.pdb
 E:\Programmation\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.csproj.CoreCompileInputs.cache
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\ApplicationInsights.config
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\csc.exe
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\System.Collections.Immutable.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\System.Reflection.Metadata.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\vbc.exe
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe.config
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\DCSONDAGE V1.dll.config
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\DCSONDAGE V1.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\DCSONDAGE V1.pdb
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.Agent.Intercept.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.PerfCounterCollector.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.Web.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.Web.Infrastructure.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Helpers.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Mvc.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Razor.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.Web.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Razor.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Helpers.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\System.Web.Mvc.xml
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Razor.resources.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Webpages.resources.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Deployment.resources.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Razor.resources.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Helpers.resources.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\bin\fr\System.Web.Mvc.resources.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.csprojResolveAssemblyReference.cache
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.dll
+Z:\GIT\Projet1\Projet1\c sharp\DCSONDAGE V1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.pdb
+D:\Projet1\DCSONDAGE V1\bin\ApplicationInsights.config
+D:\Projet1\DCSONDAGE V1\bin\roslyn\csc.exe
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projet1\DCSONDAGE V1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projet1\DCSONDAGE V1\bin\roslyn\System.Collections.Immutable.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projet1\DCSONDAGE V1\bin\roslyn\vbc.exe
+D:\Projet1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe
+D:\Projet1\DCSONDAGE V1\bin\roslyn\VBCSCompiler.exe.config
+D:\Projet1\DCSONDAGE V1\bin\DCSONDAGE V1.dll.config
+D:\Projet1\DCSONDAGE V1\bin\DCSONDAGE V1.dll
+D:\Projet1\DCSONDAGE V1\bin\DCSONDAGE V1.pdb
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.Web.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.Web.Infrastructure.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Helpers.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Mvc.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Razor.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.dll
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.dll
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.Web.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.AI.WindowsServer.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.ApplicationInsights.xml
+D:\Projet1\DCSONDAGE V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Razor.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Deployment.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Webpages.Razor.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Helpers.xml
+D:\Projet1\DCSONDAGE V1\bin\System.Web.Mvc.xml
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Razor.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Webpages.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Deployment.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Webpages.Razor.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Helpers.resources.dll
+D:\Projet1\DCSONDAGE V1\bin\fr\System.Web.Mvc.resources.dll
+D:\Projet1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.csprojResolveAssemblyReference.cache
+D:\Projet1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.dll
+D:\Projet1\DCSONDAGE V1\obj\Debug\DCSONDAGE V1.pdb
