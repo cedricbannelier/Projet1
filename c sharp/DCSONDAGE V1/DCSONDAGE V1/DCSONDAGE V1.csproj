@@ -130,12 +130,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Choix.cs" />
+    <Compile Include="Models\AfficheResultat.cs" />
     <Compile Include="Models\BDD.cs" />
     <Compile Include="Models\AfficheVote.cs" />
     <Compile Include="Models\Lien.cs" />
-    <Compile Include="Models\Sondage.cs" />
-    <Compile Include="Models\Votant.cs" />
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,6 +149,10 @@
     <Content Include="Views\Home\Liens.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Resultat\VoteU.cshtml" />
+    <Content Include="Views\Resultat\AffichageResultat.cshtml" />
+    <Content Include="Views\Resultat\VoteM.cshtml" />
+    <Content Include="Views\Resultat\Supression.cshtml" />
+    <Content Include="Views\Resultat\Erreur.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

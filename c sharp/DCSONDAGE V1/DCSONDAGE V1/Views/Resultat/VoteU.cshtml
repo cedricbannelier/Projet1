@@ -51,27 +51,28 @@
         <div class="row">
             <div class="form-group col-lg-3 center">
                 @{Int32 i = 0;
-                foreach (var Choix in Model.listeNomChoix)
-                {
-                    <p>
-                        <input type="radio" id="@Model.listeNumChoix.ElementAt(i)" value=@Model.listeNumChoix.ElementAt(i) name="radioname"> 
-                        <label for="@Model.listeNumChoix.ElementAt(i)">@Model.listeNomChoix.ElementAt(i)</label> 
-                        @(i++);
-                    </p>
-                 
+                    foreach (var Choix in Model.listeNomChoix)
+                    {
+                        <p>
+                            <input type="radio" id="@Model.listeNumChoix.ElementAt(i)" value=@Model.listeNumChoix.ElementAt(i) name="radioname">
+                            <label for="@Model.listeNumChoix.ElementAt(i)">@Model.listeNomChoix.ElementAt(i)</label>
+                            <input type="text" @(i++)  hidden>
+                        </p>
+
                     }
                 }
-
-
-
-
-
+                <p>
+                    <input type="text" name="numSondage" class="form-control" value="@Model.numSondage" hidden>
+                </p>
             </div>
+        </div>
+        <div>
+            <p class="">Il y a personnes qui @Model.nombreDeVotant ont déjà Voté</p>
         </div>
         <input type="submit" value="Confirmer le vote" class="btn btn-warning btn-block" />
     </form>
 
-  
+
 
     <footer class="form-group col-lg-5 center">
         <ul>

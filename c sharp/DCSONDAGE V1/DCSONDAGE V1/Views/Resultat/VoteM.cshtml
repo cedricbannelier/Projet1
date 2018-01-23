@@ -1,0 +1,80 @@
+﻿@model DCSONDAGE_V1.Models.AfficheVote
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/content/style.css" />
+    <title>SC Sondage</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="titre_principal">
+                <div id="logo">
+                    <a href="index.html"> <img src="./logos/logo.png" alt="Logo DCSondage"></a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Se connecter</a></li>
+                    <li><a href="#">S'enregistrer</a></li>
+                </ul>
+                <div id="recherche">
+                    <form action="" class="formulaire">
+                        <input class="champ" type="text" value="Recherche" onfocus="this.value='';" onblur="if(this.value=='')this.value='Recherche';" />
+                        <a href="#"><img src="loupe.png" height="15" width="15" alt="Loupe"> </a>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <div id="banniere_image">
+
+        </div>
+
+        <section>
+            <article>
+                <div>
+                    <p class="">@Model.nomSondage</p>
+                </div>
+                <form action="/Resultat/Submit2" method="post">
+                    <input type="hidden" name="idSondage" value="@Model.numSondage" />
+                    @{
+                        int i = 0;
+                        string choix = "choix";
+                        foreach (var Ligne in Model.listeNumChoix)
+                        {
+
+                            <div class="form-group ">
+                                <input name="@(choix + i)" type="checkbox" value="@Model.listeNumChoix.ElementAt(i)" id="@(choix + i)">
+                                <label for="@(choix + i)">@Model.listeNomChoix.ElementAt(i)</label>
+                            </div>
+                            i++;
+                        }
+                    }
+                    <div>
+                        <p class="">Il y a personnes qui @Model.nombreDeVotant ont déjà Voté</p>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-danger">VALIDER</button>
+                    </div>
+                </form>
+
+
+
+
+            </article>
+        </section>
+        <footer>
+            <a href="#">Contact</a>
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique d'accessibilité</a>
+        </footer>
+    </div>
+</body>
+</html>
