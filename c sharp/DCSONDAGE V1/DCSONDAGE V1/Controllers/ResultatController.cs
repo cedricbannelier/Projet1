@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Helpers;
 using DCSONDAGE_V1.Models;
 
 namespace DCSONDAGE_V1.Controllers
@@ -55,11 +56,38 @@ namespace DCSONDAGE_V1.Controllers
                 return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
             }
         }
-        public ActionResult AffichageResultat (Int32 id)
+        public ActionResult AffichageResultat(Int32 id)
+
         {
-            AfficheResultat affiche2=BDD.requeteSqlRecupListeChoixetIdetNbVote(id);
-            return View("AffichageResultat", affiche2);
+
+            AfficheResultat affiche2 = BDD.requeteSqlRecupListeChoixetIdetNbVote(id);
+            CreationCammembert cammembert = BDD.requeteSqlPourCammebert(id);
+
+            Chart graphique = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow)
+
+             .AddTitle("Diagramme en secteurs")
+
+             .AddSeries("Default", chartType: "Pie",// pas changé
+
+            xValue: cammembert.listeChoixVote  , xField: "listeChoixVote", // a changer par nomChoix
+
+            yValues: cammembert.listePourcentage, yFields: "ListePourcentage").Save("~/Content/dessin.jpeg"); //  a changer par la sum des votes de chaque choix
+
+            Chart graphique2 = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow)
+
+             .AddTitle("Histogramme")
+
+             .AddSeries("Default", // pas changé
+
+            xValue: affiche2.listeNomChoixPourModel, xField: "listeNomChoixPourModel", // a changer par nomChoix
+
+            yValues: affiche2.pourcentageParChoixPourModel, yFields: "pourcentageParChoixPourModel").Save("~/Content/dessin2.jpeg"); //  a changer par la sum des votes de chaque choix
+
+            return View("AffichageResultat",affiche2);
+
         }
+
+        
         public ActionResult Submit2(Int32? choix0, Int32? choix1, Int32? choix2, Int32? choix3, Int32? choix4, Int32 idSondage)
         {
             if (BDD.testSiVoteDesactive(idSondage))
