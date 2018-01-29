@@ -100,11 +100,8 @@ namespace DCSONDAGE_V1.Models
         public static Int32 requeteSqlTypeVote(Int32 idSondage)
         {
             Int32 typeVote = 0;
-            Connection();
-            SqlCommand requeteSql = new SqlCommand("Select typeSondage from Sondage where numSondage=@idSondage;", DCConnect);
-            var idsondageParameter = new SqlParameter("@idsondage", idSondage);
-            requeteSql.Parameters.Add(idsondageParameter);
-            Int32 typeVoteEnInt = (Int32)requeteSql.ExecuteScalar();
+
+            Int32 typeVoteEnInt = GetTypeSondage(idSondage);
             if (typeVoteEnInt % 10 == 1)
             {
                 typeVote = 1;
@@ -273,32 +270,7 @@ namespace DCSONDAGE_V1.Models
         }
         public static Int32 rechercheEtDesactivationSondage(String GuidSuppr)
         {
-            List<String> listeGuid = new List<String>();
-            List<Int32> listeIdSondage = new List<Int32>();
-            Int32 idSondage = 0;
-            Int32 i = 0;
-            Connection();
-            SqlCommand requeteSql = new SqlCommand("Select adresseLien, s.numSondage from sondage s,lien l where s.numSondage=l.numSondage ;", DCConnect);
-            SqlDataReader dr = requeteSql.ExecuteReader();
-            while (dr.Read())
-            {
-                listeGuid.Add((String)dr["adresseLien"]);
-                listeIdSondage.Add((Int32)dr["numSondage"]);
-            }
-
-            foreach (var ligne in listeGuid)
-            {
-                if (ligne.ToLower() == GuidSuppr)
-                {
-                    idSondage = listeIdSondage.ElementAt(i);
-                }
-                else
-                {
-                    idSondage = -1;
-                }
-                i++;
-            }
-            Deconnection();
+            Int32 idSondage=GetIdSondageParGuid(GuidSuppr);
             RequeteSqlUpdateType(idSondage);
             return idSondage;
         }
@@ -335,7 +307,7 @@ namespace DCSONDAGE_V1.Models
         {
             List<String> listeChoixVote = new List<String>();
             List<Double> ListePourcentage = new List<Double>();
-            
+
 
             Connection();
             SqlCommand requeteSql = new SqlCommand("Select C.nomChoix, 100*count(nomChoix)/(select  count(nomChoix) from Choix c, Vote v where numSondage=@idSondage and v.numChoix=c.numChoix ) as pourcentage from Vote V, Sondage S, Choix C where S.numSondage=@idSondage and C.numSondage=S.numSondage and C.numChoix=V.numChoix group by C.nomChoix,C.numChoix ;", DCConnect);
@@ -357,5 +329,48 @@ namespace DCSONDAGE_V1.Models
 
 
         }
+
+        public static Int32 GetTypeSondage(Int32 idSondage)
+        {
+            Connection();
+            SqlCommand requeteSql = new SqlCommand("Select typeSondage from Sondage where numSondage=@idSondage;", DCConnect);
+            var idsondageParameter = new SqlParameter("@idsondage", idSondage);
+            requeteSql.Parameters.Add(idsondageParameter);
+            Int32 typeVoteEnInt = (Int32)requeteSql.ExecuteScalar();
+            Deconnection();
+            return typeVoteEnInt;
+
+        }
+        public static Int32 GetIdSondageParGuid(String GuidSuppr)
+        {
+            List<String> listeGuid = new List<String>();
+            List<Int32> listeIdSondage = new List<Int32>();
+            Int32 idSondage = 0;
+            Int32 i = 0;
+            Connection();
+            SqlCommand requeteSql = new SqlCommand("Select adresseLien, s.numSondage from sondage s,lien l where s.numSondage=l.numSondage ;", DCConnect);
+            SqlDataReader dr = requeteSql.ExecuteReader();
+            while (dr.Read())
+            {
+                listeGuid.Add((String)dr["adresseLien"]);
+                listeIdSondage.Add((Int32)dr["numSondage"]);
+            }
+
+            foreach (var ligne in listeGuid)
+            {
+                if (ligne.ToLower() == GuidSuppr)
+                {
+                    idSondage = listeIdSondage.ElementAt(i);
+                }
+                else
+                {
+                    idSondage = -1;
+                }
+                i++;
+            }
+            Deconnection();
+            return idSondage;
+        }
+
     }
 }

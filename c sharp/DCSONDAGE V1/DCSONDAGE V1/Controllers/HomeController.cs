@@ -20,9 +20,7 @@ namespace DCSONDAGE_V1.Controllers
         }
         public ActionResult Submit(string titreSondage, Int32 restrictionSondage, Int32 RadioB, string Choix1, string Choix2, string Choix3, string Choix4, string Choix5)
         {
-            // insert into sondage(questionSondage,typeSondage) values (titreSondage,RadioB)
-
-            if (titreSondage == "") 
+            if (titreSondage == "")
             {
                 return View("Erreur", (object)"Vous n'avez pas rempli le libellé du sondage");
             }
@@ -53,31 +51,36 @@ namespace DCSONDAGE_V1.Controllers
                 {
                     return View("Erreur", (object)"vous n'avez pas rempli au moins 2 champs de reponses possibles");
                 }
-                
+
                 Int32 idsondage = BDD.RequeteAjoutSqlSondage(titreSondage, RadioB);
 
                 BDD.requetteAjoutSqlChoix(idsondage, listechoix);
                 Lien Liencourrant = new Lien(idsondage, RadioB);
                 BDD.requetteAjoutSqlLienSuppr(idsondage, Liencourrant.Guidsuppression);
-                return View("Liens", Liencourrant);
+
+                return Redirect(string.Format("/Home/Liens/{0}", Liencourrant.Guidsuppression.ToString()));
             }
-            
-            
+
+
         }
-       /* public ActionResult Vote(Int32 numSondage)
+        public ActionResult Liens(String id)
         {
-            Int32 typeVote = BDD.requeteSqlTypeVote(numSondage);
-            if (typeVote==1)
+            String listeGuid = id;
+            Int32 idSondage=BDD.GetIdSondageParGuid(id);
+            if (idSondage < 0)
             {
-                return Redirect(string.Format("/Resultat/VoteU/{0}", numSondage));
+                return View("Erreur", (object)"C'est pas bien de fouille pour tenté d'avoir des liens de suppressions");
             }
             else
             {
-                return Redirect(string.Format("/Resultat/VoteM/{0}", numSondage));
+                Int32 typeSondage = BDD.GetTypeSondage(idSondage);
+                Lien LiensCourant = new Lien(idSondage, typeSondage, listeGuid);
+                return View("Liens", LiensCourant);
             }
-
-
-        }*/
-       
+            
+                
+            
+            
+        }
     }
 }

@@ -17,43 +17,73 @@ namespace DCSONDAGE_V1.Controllers
         }
         public ActionResult VoteU(Int32 id)
         {
-            if (BDD.testSiVoteDesactive(id))
+            String cookiename = String.Format("Vote{0}", id);
+            if (Request.Cookies[cookiename] != null)
             {
-                return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
             }
             else
             {
-                AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
-                Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
-                Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
-                return View("VoteU", Affiche);
+                if (BDD.testSiVoteDesactive(id))
+                {
+                    return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                }
+                else
+                {
+                    AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
+                    Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
+                    Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
+                    return View("VoteU", Affiche);
+                }
             }
         }
         public ActionResult VoteM(Int32 id)
         {
-            if (BDD.testSiVoteDesactive(id))
-            {
-                return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
-            }
-            else
-            {
-                AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
-                Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
-                Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
-                return View("VoteM", Affiche);
-            }
+                String cookiename = String.Format("Vote{0}", id);
+                if (Request.Cookies[cookiename] != null)
+                {
+                    return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
+                }
+                else
+                {
+                    if (BDD.testSiVoteDesactive(id))
+                    {
+                        return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                    }
+                    else
+                    {
+                        AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
+                        Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
+                        Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
+                        return View("VoteM", Affiche);
+                    }
+                }
+            
         }
         public ActionResult Submit(Int32 radioname, Int32 numSondage)
         {
-            if (BDD.testSiVoteDesactive(numSondage))
+            String cookiename = String.Format("Vote{0}", numSondage);
+            if (Request.Cookies[cookiename] != null)
             {
-                return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
             }
             else
             {
-                int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostAddress.ToString());
-                BDD.requeteSqlDepotDesVotes(radioname, idduVotant);
-                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
+                HttpCookie UnCookie = new HttpCookie(cookiename);
+                UnCookie.Value = "A deja voté";
+                UnCookie.Expires = DateTime.Now.AddDays(1);
+                Response.Cookies.Add(UnCookie);
+
+                if (BDD.testSiVoteDesactive(numSondage))
+                {
+                    return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                }
+                else
+                {
+                    int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostAddress.ToString());
+                    BDD.requeteSqlDepotDesVotes(radioname, idduVotant);
+                    return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
+                }
             }
         }
         public ActionResult AffichageResultat(Int32 id)
@@ -90,37 +120,50 @@ namespace DCSONDAGE_V1.Controllers
         
         public ActionResult Submit2(Int32? choix0, Int32? choix1, Int32? choix2, Int32? choix3, Int32? choix4, Int32 idSondage)
         {
-            if (BDD.testSiVoteDesactive(idSondage))
+            String cookiename = String.Format("Vote{0}", idSondage);
+            if (Request.Cookies[cookiename] != null)
             {
-                return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", idSondage));
             }
             else
             {
-                List<Int32> ListeDesChoixValidesParLeVotant = new List<Int32>();
-                if (choix0 != null)
-                {
-                    ListeDesChoixValidesParLeVotant.Add((Int32)choix0);
-                }
-                if (choix1 != null)
-                {
-                    ListeDesChoixValidesParLeVotant.Add((Int32)choix1);
-                }
-                if (choix2 != null)
-                {
-                    ListeDesChoixValidesParLeVotant.Add((Int32)choix2);
-                }
-                if (choix3 != null)
-                {
-                    ListeDesChoixValidesParLeVotant.Add((Int32)choix3);
-                }
-                if (choix4 != null)
-                {
-                    ListeDesChoixValidesParLeVotant.Add((Int32)choix4);
-                }
+                HttpCookie UnCookie = new HttpCookie(cookiename);
+                UnCookie.Value = "A deja voté";
+                UnCookie.Expires = DateTime.Now.AddDays(1);
+                Response.Cookies.Add(UnCookie);
 
-                int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostAddress.ToString());
-                BDD.requeteSqlDepotDesVotesMultiple(ListeDesChoixValidesParLeVotant, idduVotant);
-                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", idSondage));
+                if (BDD.testSiVoteDesactive(idSondage))
+                {
+                    return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                }
+                else
+                {
+                    List<Int32> ListeDesChoixValidesParLeVotant = new List<Int32>();
+                    if (choix0 != null)
+                    {
+                        ListeDesChoixValidesParLeVotant.Add((Int32)choix0);
+                    }
+                    if (choix1 != null)
+                    {
+                        ListeDesChoixValidesParLeVotant.Add((Int32)choix1);
+                    }
+                    if (choix2 != null)
+                    {
+                        ListeDesChoixValidesParLeVotant.Add((Int32)choix2);
+                    }
+                    if (choix3 != null)
+                    {
+                        ListeDesChoixValidesParLeVotant.Add((Int32)choix3);
+                    }
+                    if (choix4 != null)
+                    {
+                        ListeDesChoixValidesParLeVotant.Add((Int32)choix4);
+                    }
+
+                    int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostAddress.ToString());
+                    BDD.requeteSqlDepotDesVotesMultiple(ListeDesChoixValidesParLeVotant, idduVotant);
+                    return Redirect(string.Format("/Resultat/AffichageResultat/{0}", idSondage));
+                }
             }
         }
         public ActionResult Suppression(String id)

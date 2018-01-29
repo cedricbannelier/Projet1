@@ -30,6 +30,22 @@ namespace DCSONDAGE_V1.Models
             Guidsuppression = SuppressionGuid;
             adresseLien3 = string.Format("/Resultat/Suppression/{0}", SuppressionGuid);          //  Suppression
         }
+        public Lien(Int32 numSondage, Int32 typeSondage, String stringGuid)
+        {
+            if (typeSondage == 1)
+            {
+                adresseLien1 = string.Format("/Resultat/VoteU/{0}", numSondage);  //vote
+            }
+            else
+            {
+                adresseLien1 = string.Format("/Resultat/VoteM/{0}", numSondage);  //vote
+            }
+
+            adresseLien2 = string.Format("/Resultat/AffichageResultat/{0}", numSondage);            // resultat
+           
+           
+            adresseLien3 = string.Format("/Resultat/Suppression/{0}", stringGuid);          //  Suppression
+        }
 
     }
 }
