@@ -32,7 +32,7 @@ namespace DCSONDAGE_V1.Models
         }
         public Lien(Int32 numSondage, Int32 typeSondage, String stringGuid)
         {
-            if (typeSondage == 1)
+            if (typeSondage%10 == 1)
             {
                 adresseLien1 = string.Format("/Resultat/VoteU/{0}", numSondage);  //vote
             }
