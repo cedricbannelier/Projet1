@@ -17,10 +17,28 @@ namespace DCSONDAGE_V1.Controllers
         }
         public ActionResult VoteU(Int32 id)
         {
-            String cookiename = String.Format("Vote{0}", id);
-            if (Request.Cookies[cookiename] != null)
+            if (id < 20)
             {
-                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
+                String cookiename = String.Format("Vote{0}", id);
+
+                if (Request.Cookies[cookiename] != null)
+                {
+                    return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
+                }
+                else
+                {
+                    if (BDD.testSiVoteDesactive(id))
+                    {
+                        return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                    }
+                    else
+                    {
+                        AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
+                        Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
+                        Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
+                        return View("VoteU", Affiche);
+                    }
+                }
             }
             else
             {
@@ -30,15 +48,35 @@ namespace DCSONDAGE_V1.Controllers
                 }
                 else
                 {
-                    AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
-                    Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
-                    Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
-                    return View("VoteU", Affiche);
+                    List<String> ipEnBDD = new List<string>();
+                    bool ipPresenteEnBDD = false;
+                    ipEnBDD = BDD.GetIp(id);
+                    foreach (var ipCourante in ipEnBDD)
+                    {
+                        if (ipCourante == Request.UserHostAddress.ToString())
+                        {
+                            ipPresenteEnBDD = true;
+                        }
+                    }
+                    if (ipPresenteEnBDD)
+                    {
+                        return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
+                    }
+                    else
+                    {
+                        AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
+                        Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
+                        Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
+                        return View("VoteU", Affiche);
+                    }
+
                 }
             }
         }
         public ActionResult VoteM(Int32 id)
         {
+            if (id <20)
+            {
                 String cookiename = String.Format("Vote{0}", id);
                 if (Request.Cookies[cookiename] != null)
                 {
@@ -58,6 +96,41 @@ namespace DCSONDAGE_V1.Controllers
                         return View("VoteM", Affiche);
                     }
                 }
+            }
+            else
+            {
+                List<String> ipEnBDD = new List<string>();
+                bool ipPresenteEnBDD = false;
+                ipEnBDD = BDD.GetIp(id);
+                foreach (var ipCourante in ipEnBDD)
+                {
+                    if(ipCourante == Request.UserHostAddress.ToString())
+                    {
+                        ipPresenteEnBDD = true;
+                    }
+                }
+                if (ipPresenteEnBDD)
+                {
+                    return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
+                }
+                else
+                {
+
+
+                    if (BDD.testSiVoteDesactive(id))
+                    {
+                        return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                    }
+                    else
+                    {
+                        AfficheVote Affiche = BDD.requeteSqlRecupListeChoixetId(id);
+                        Affiche.ajoutNomsondage(BDD.requeteSqlRecupNomSondage(id));
+                        Affiche.ajoutNbVotant(BDD.requeteSqlRecupNbVotant(id));
+                        return View("VoteM", Affiche);
+                    }
+                }
+            }
+           
             
         }
         public ActionResult Submit(Int32 radioname, Int32 numSondage)

@@ -52,10 +52,10 @@ namespace DCSONDAGE_V1.Controllers
                     return View("Erreur", (object)"vous n'avez pas rempli au moins 2 champs de reponses possibles");
                 }
 
-                Int32 idsondage = BDD.RequeteAjoutSqlSondage(titreSondage, RadioB);
+                Int32 idsondage = BDD.RequeteAjoutSqlSondage(titreSondage, RadioB+ restrictionSondage);
 
                 BDD.requetteAjoutSqlChoix(idsondage, listechoix);
-                Lien Liencourrant = new Lien(idsondage, RadioB);
+                Lien Liencourrant = new Lien(idsondage, RadioB+ restrictionSondage);
                 BDD.requetteAjoutSqlLienSuppr(idsondage, Liencourrant.Guidsuppression);
 
                 return Redirect(string.Format("/Home/Liens/{0}", Liencourrant.Guidsuppression.ToString()));

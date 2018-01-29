@@ -371,6 +371,23 @@ namespace DCSONDAGE_V1.Models
             Deconnection();
             return idSondage;
         }
+        public static List<String> GetIp (Int32 idSondage)
+        {
+            List<String> ipEnBDD = new List<String>();
+            Connection();
+            SqlCommand requeteSql = new SqlCommand("Select adresseIp from votant o, vote v ,choix c, sondage s where s.numSondage=@idsondage and s.numsondage=c.numSondage and c.numChoix=v.numChoix and V.numVotant=o.numVotant;", DCConnect);
+            var idsondageParameter = new SqlParameter("@idsondage", idSondage);
+            requeteSql.Parameters.Add(idsondageParameter);
+            SqlDataReader dr = requeteSql.ExecuteReader();
+            while (dr.Read())
+            {
+                ipEnBDD.Add((String)dr["adresseIp"]);
+            }
+
+            Deconnection();
+
+            return ipEnBDD;
+        }
 
     }
 }
