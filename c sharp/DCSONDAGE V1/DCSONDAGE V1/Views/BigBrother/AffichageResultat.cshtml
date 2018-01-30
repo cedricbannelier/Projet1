@@ -1,8 +1,7 @@
-﻿@model DCSONDAGE_V1.Models.AfficheVote
+﻿@model DCSONDAGE_V1.Models.AfficheBigBrother
 @{
     Layout = null;
 }
-
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +16,7 @@
 <body class="container">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.html"><img src="logo.png" alt="Logo DCSondage"> </a>
+        <a href="index.html"><img src="~/Content/logo.png" alt="Logo DCSondage"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,40 +41,34 @@
     </header>
 
     <br />
-    <h3>Veuillez selectionner au minimum un choix de réponse.</h3>
-    <p>Sondage choix multiple</p>
-    <p>@Model.nomSondage</p>
+    <h3></h3>
+
     <br />
-    <form action="/Resultat/Submit2" method="post">
+    <div class="col-lg-6">
+        <table class="table table-hover table-warning">
+            <tr>
+                
+                <th>Qui</th>
+                <th>a voté quoi</th>
 
-
-
-        <input type="hidden" name="idSondage" value="@Model.numSondage" />
-        @{
-            int i = 0;
-            foreach (var Ligne in Model.listeNumChoix)
+            </tr>
+            @{int i = 0; }
+            @foreach (var news in Model.listeDesNomChoix)
             {
-                <p>
-                    <input name="choix" type="checkbox" value=@Model.listeNumChoix.ElementAt(i) id="@i" />
-                    <label for="@i">@Model.listeNomChoix.ElementAt(i)</label>
-                </p>
+
+                <tr>
+                    
+                    <td>@Model.listeDesVotant.ElementAt(i)</td>
+                    <td>@Model.listeDesNomChoix.ElementAt(i) </td>
+                </tr>
                 i++;
             }
-        }
+        </table>
+    </div>
+   
 
-        <div class="row">
-            <div class="form-group col-lg-3 center">
+    <a href="/home/creation"><button type="button" class="btn btn-warning btn-block">Création d'un sondage</button></a>
 
-
-            </div>
-            <div>
-                <p>Il y a @Model.nombreDeVotant personnes qui ont déjà Voté</p>
-            </div>
-
-        </div>
-
-        <button type="submit" class="btn btn-warning btn-block">Confirmer le vote</button>
-    </form>
     <footer class="form-group col-lg-5 center">
         <ul>
             <li><a href="#">Contact</a></li>

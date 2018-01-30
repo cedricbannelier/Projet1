@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BigBrotherController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResultatController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,6 +138,7 @@
     <Compile Include="Models\AfficheResultat.cs" />
     <Compile Include="Models\BDD.cs" />
     <Compile Include="Models\AfficheVote.cs" />
+    <Compile Include="Models\AfficheBigBrother.cs" />
     <Compile Include="Models\CreationCammembert.cs" />
     <Compile Include="Models\Lien.cs" />
     <Compile Include="Models\Vote.cs" />
@@ -159,6 +161,7 @@
     <Content Include="Views\Resultat\Supression.cshtml" />
     <Content Include="Views\Resultat\Erreur.cshtml" />
     <Content Include="Views\Home\Erreur.cshtml" />
+    <Content Include="Views\BigBrother\AffichageResultat.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

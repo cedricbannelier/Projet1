@@ -388,6 +388,25 @@ namespace DCSONDAGE_V1.Models
 
             return ipEnBDD;
         }
+        public static AfficheBigBrother BigBrotherIP(Int32 idSondage)
+        {
+            
+            List<String> ipEnBDD = new List<String>();
+            List<String> choixEnBDD = new List<String>();
+            Connection();
+            SqlCommand requeteSql = new SqlCommand("Select adresseIp, c.nomChoix from votant o, vote v ,choix c, sondage s where s.numSondage = @idsondage and s.numsondage = c.numSondage and c.numChoix = v.numChoix and V.numVotant = o.numVotant group by adresseIp, c.nomChoix;", DCConnect);
+            var idsondageParameter = new SqlParameter("@idsondage", idSondage);
+            requeteSql.Parameters.Add(idsondageParameter);
+            SqlDataReader dr = requeteSql.ExecuteReader();
+            while (dr.Read())
+            {
+                ipEnBDD.Add((String)dr["adresseIp"]);
+                choixEnBDD.Add((String)dr["nomChoix"]);
+            }
+            Deconnection();
+            AfficheBigBrother surveillance = new AfficheBigBrother(ipEnBDD, choixEnBDD);
+            return surveillance;
+        }
 
     }
 }
