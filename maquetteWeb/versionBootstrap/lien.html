@@ -1,0 +1,75 @@
+@model DCSONDAGE_V1.Models.Lien
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <!-- CSS perso -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="container"> 
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="index.html"><img src="logo.png" alt="Logo DCSondage"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">S'enregistrer</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
+            </div>
+        </nav>
+        <header>
+            <a href="index.html"><img src="dcS_White_Transparent.png" alt="Logo DCSondage" id="banniere_image"> </a>
+        </header>
+
+        <br/>
+        <h1>Ci-dessous les 3 liens à GARDER</h1>
+
+        <div class="row">		
+            <div class="form-group col-lg-3 center">
+
+                <ul>
+                    <li><a href="@Model.adresseLien1">Vote </a>@Model.adresseLien1</li><br/>
+                    <li><a href="@Model.adresseLien2">Resultat </a>@Model.adresseLien2</li><br/>
+                    <li><a href="@Model.adresseLien3">Suppression </a>@Model.adresseLien3</li>
+                </ul>
+
+            </div>
+        </div>
+        <br/>
+
+
+        <a href="creationSondage.html"><button type="button" class="btn btn-warning btn-block">Création d'un sondage</button></a>
+
+        <footer class="form-group col-lg-5 center">
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique d'accessibilité</a></li>
+            </ul>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    </body>
+</html>
