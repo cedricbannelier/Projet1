@@ -157,7 +157,7 @@ namespace DCSONDAGE_V1.Controllers
                 }
                 else
                 {
-                    int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostAddress.ToString());
+                    int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostName.ToString());
                     BDD.requeteSqlDepotDesVotes(radioname, idduVotant);
                     return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
                 }
