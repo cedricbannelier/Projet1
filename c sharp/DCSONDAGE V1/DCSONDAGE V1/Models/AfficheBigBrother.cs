@@ -7,10 +7,8 @@ namespace DCSONDAGE_V1.Models
 {
     public class AfficheBigBrother
     {
-
         public List<String> listeDesVotant { get; set; }
         public List<String> listeDesNomChoix { get; set; }
-
         public AfficheBigBrother(List<String> listeIP, List<String> listeNomChoix)
         {
             List<String> listeVotant = new List<string>();
@@ -73,8 +71,6 @@ namespace DCSONDAGE_V1.Models
                 listeDesVotant = listeVotant;
                 listeDesNomChoix = listeNomChoix;
             }
-
         }
-
     }
 }

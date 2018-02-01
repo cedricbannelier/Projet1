@@ -129,9 +129,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BigBrotherController.cs" />
+    <Compile Include="Controllers\BigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ResultatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -141,6 +140,7 @@
     <Compile Include="Models\AfficheBigBrother.cs" />
     <Compile Include="Models\Constantes.cs" />
     <Compile Include="Models\CreationCammembert.cs" />
+    <Compile Include="Models\ErreurTemporaire.cs" />
     <Compile Include="Models\Lien.cs" />
     <Compile Include="Models\Methodes.cs" />
     <Compile Include="Models\Vote.cs" />
@@ -155,13 +155,12 @@
     <Content Include="Views\Home\Creation.cshtml" />
     <Content Include="Views\Home\Liens.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Resultat\VoteU.cshtml" />
-    <Content Include="Views\Resultat\AffichageResultat.cshtml" />
-    <Content Include="Views\Resultat\VoteM.cshtml" />
-    <Content Include="Views\Resultat\Supression.cshtml" />
-    <Content Include="Views\Resultat\Erreur.cshtml" />
+    <Content Include="Views\Home\AffichageResultat.cshtml" />
+    <Content Include="Views\Home\Supression.cshtml" />
+    <Content Include="Views\Home\ErreurTemporaire.cshtml" />
+    <Content Include="Views\Big\AffichageResultat.cshtml" />
     <Content Include="Views\Home\Erreur.cshtml" />
-    <Content Include="Views\BigBrother\AffichageResultat.cshtml" />
+    <Content Include="Views\Home\Vote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Liens\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

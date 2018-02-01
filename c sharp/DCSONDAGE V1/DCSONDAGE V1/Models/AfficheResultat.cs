@@ -22,8 +22,5 @@ namespace DCSONDAGE_V1.Models
             voteParChoixPourModel = voteParChoix;
             pourcentageParChoixPourModel = pourcentageParChoix;
         }
-
-
-
     }
 }

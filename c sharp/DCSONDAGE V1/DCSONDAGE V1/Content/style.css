@@ -25,6 +25,10 @@ h1,h3,p{
     color:orange;
 }
 
+.centrerTableau{
+    text-align:center;
+}
+
 .form-group{
     width: 300px;
     /*	box-shadow: 10px 5px 5px red;*/

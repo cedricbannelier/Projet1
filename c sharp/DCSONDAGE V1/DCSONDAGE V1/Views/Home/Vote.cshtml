@@ -1,4 +1,4 @@
-﻿
+﻿@model DCSONDAGE_V1.Models.AfficheVote
 @{
     Layout = null;
 }
@@ -8,16 +8,16 @@
 <html>
 <head>
     <meta charset="utf-8" />
-
+    <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
+    <!-- CSS perso -->
     <link rel="stylesheet" href="~/content/style.css" />
 </head>
 <body class="container">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="~/Home/Index"><img src="~/Content/logo.png" alt="Logo DCSondage"> </a>
+        <a href="~/home/index"><img src="~/Content/logo.png" alt="Logo DCSondage"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,57 +40,58 @@
     <header>
         <a href="~/home/index"><img src="~/Content/dcS_White_Transparent.png" alt="Logo DCSondage" id="banniere_image"> </a>
     </header>
+
     <br />
-    <h3>Veuillez remplir le formulaire ci-dessous puis cliquer sur création sondage</h3>
+    <h3>Veuillez selectionner au minimum un choix de réponse.</h3>
+    <p>Sondage choix multiple</p>
+    <p><h3>@Model.nomSondage</h3></p>
     <br />
-    <form action="/Home/Submit" method="post">
+    <form action="/Home/SubmitVote" method="post">
+
+
+
+        <input type="hidden" name="idSondage" value="@Model.numSondage" />
+        @{ if (@Model.typeSondage % 10 == 0)
+            {
+                Int32 i = 0;
+                foreach (var ligne in Model.listeNumChoix)
+                {
+                    <p>
+                        <input name="choix" type="checkbox" value=@Model.listeNumChoix.ElementAt(i) id="@i" />
+                        <label for="@i">@Model.listeNomChoix.ElementAt(i)</label>
+                    </p>
+                    i++;
+                }
+            }
+            else
+            {
+                Int32 i = 0;
+                foreach (var ligne in Model.listeNomChoix)
+                {
+                    <p>
+                        <input type="radio" id="@Model.listeNumChoix.ElementAt(i)" value=@Model.listeNumChoix.ElementAt(i) name="choix">
+                        <label for="@Model.listeNumChoix.ElementAt(i)">@Model.listeNomChoix.ElementAt(i)</label>
+                        
+                    </p>
+                    i++;
+                }
+            }
+
+        }
+        <p>Il y a @Model.nombreDeVotant personnes qui ont déjà Voté</p>
         <div class="row">
             <div class="form-group col-lg-3 center">
-                <div class="form-check">
-                    <input type="radio" id="1" value=1 name="radioB">
-                    <label for="1">Unique</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" id="0" value=0 name="radioB">
-                    <label for="0">Multiple</label>
-                </div>
-                <br />
-                <div class="form-group">
-                    <input type="text" name="titreSondage" class="form-control" id="idTitreSondage" placeholder="Veuillez saisir la question du sondage">
-                </div>
-                <br />
-                <div class="form-group">
-                    <input type="text" name="creationChoix[0]" class="form-control"  placeholder="Veuillez entrer votre choix 1">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="creationChoix[1]" class="form-control" placeholder="Veuillez entrer votre choix 2">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="creationChoix[2]" class="form-control"  placeholder="Veuillez entrer votre choix 3">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="creationChoix[3]" class="form-control"  placeholder="Veuillez entrer votre choix 4">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="creationChoix[4]" class="form-control"  placeholder="Veuillez entrer votre choix 5">
-                </div>
-                <div class="form-group">
-                    <select name="restrictionSondage" class="form-control">
-                        <option selected value="10">Cookie</option>
-                        <option value="20">Adresse IP</option>
-                    </select>
-                </div>
+
+
+            </div>
+            <div>
+                
             </div>
 
         </div>
 
-        <a href="~/Home/Submit"><input type="submit" value="Générer le sondage" class="btn btn-warning btn-block" /></a><br />
-        <a href="~/Home/Creation/"><input type="button" class="btn btn-danger btn-block"value="Effacer valeur"></a>
-
+        <button type="submit" class="btn btn-warning btn-block">Confirmer le vote</button>
     </form>
-
-
-
     <footer class="form-group col-lg-5 center">
         <ul>
             <li><a href="#">Contact</a></li>

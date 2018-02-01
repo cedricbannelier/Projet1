@@ -26,13 +26,5 @@ namespace DCSONDAGE_V1.Models
             UnCookie.Expires = DateTime.Now.AddDays(1);
             HttpContext.Current.Response.Cookies.Add(UnCookie);
         }
-        public static void DepotVoteEtVotantPourChoixUnique(Int32 radioname)
-        {
-            int idduVotant = BDD.requeteSqlDepotvotant(HttpContext.Current.Request.UserHostName.ToString());
-            BDD.requeteSqlDepotDesVotes(radioname, idduVotant);
-
-        }
-
     }
-
 }

@@ -13,7 +13,6 @@ namespace DCSONDAGE_V1.Models
         public Int32 numSondage { get; set; }
         public Int32 typeSondage { get; set; }
         public Int32 nombreDeVotant { get; set; }
-
         public AfficheVote(Int32 idSondage, String nom, List<Int32> listeIdChoix, List<String> listeChoix, Int32 Sondage)
         {
             numSondage = idSondage;

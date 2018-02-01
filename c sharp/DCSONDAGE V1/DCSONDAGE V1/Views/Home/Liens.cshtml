@@ -30,7 +30,7 @@
                     <a class="nav-link" href="#">S'enregistrer</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form action="/Home/Rechercher" method="post" class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
@@ -41,7 +41,7 @@
     </header>
 
     <br />
-    <h1>Ci-dessous les 3 liens à GARDER</h1>
+    <h1>Ci-dessous les 3 liens à GARDER pour votre sondage</h1>
 @{
 
     string host = "172.19.240.5:12231"; }
@@ -54,21 +54,21 @@
 
                 <div class="input-group-prepend">
                     
-                        <a href="@Model.adresseLien1"> <span class="input-group-text" id="">Vote</span></a>
+                        <a href="@Model.adresseLien1" target="_blank"> <span class="input-group-text" id="">Vote</span></a>
                     </div>
                     <input type="text" class="form-control" value=@host@Model.adresseLien1>
                 </div>
                 <br />
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <a href="@Model.adresseLien2">  <span class="input-group-text" id="">Resultat</span></a>
+                        <a href="@Model.adresseLien2" target="_blank">  <span class="input-group-text" id="">Resultat</span></a>
                     </div>
                     <input type="text" class="form-control" value=@host@Model.adresseLien2>
                 </div>
                 <br />
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <a href="@Model.adresseLien3"><span class="input-group-text" id="">Suppression</span></a>
+                        <a href="@Model.adresseLien3" target="_blank"><span class="input-group-text" id="">Suppression</span></a>
                     </div>
                     <input type="text" class="form-control" value=@host@Model.adresseLien3>
                 </div>
