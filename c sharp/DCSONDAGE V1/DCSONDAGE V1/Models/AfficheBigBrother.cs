@@ -12,7 +12,7 @@ namespace DCSONDAGE_V1.Models
         public List<String> listeDesNomChoix { get; set; }
 
         public AfficheBigBrother(List<String> listeIP, List<String> listeNomChoix)
-         {
+        {
             List<String> listeVotant = new List<string>();
             foreach (var ligne in listeIP)
             {
@@ -75,6 +75,6 @@ namespace DCSONDAGE_V1.Models
             }
 
         }
-         
+
     }
 }

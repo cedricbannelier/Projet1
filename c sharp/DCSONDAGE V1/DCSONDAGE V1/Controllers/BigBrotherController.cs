@@ -10,11 +10,14 @@ namespace DCSONDAGE_V1.Controllers
     public class BigBrotherController : Controller
     {
         // GET: BigBrother
-       public ActionResult Index(Int32 id)
+        public ActionResult Index(Int32 id=0)
         {
-            AfficheBigBrother Affichage=BDD.BigBrotherIP(id);
-
-            return View("AffichageResultat", Affichage);
-        } 
+            if (id < 1)
+            {
+                return View("Erreur", (object)"adresse non complete");
+            }
+                AfficheBigBrother Affichage = BDD.BigBrotherIP(id);
+                return View("AffichageResultat", Affichage);
+        }
     }
 }

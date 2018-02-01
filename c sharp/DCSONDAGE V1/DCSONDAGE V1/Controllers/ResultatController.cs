@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using System.Web.Helpers;
 using DCSONDAGE_V1.Models;
 
+
+
 namespace DCSONDAGE_V1.Controllers
 {
     public class ResultatController : Controller
@@ -15,11 +17,17 @@ namespace DCSONDAGE_V1.Controllers
         {
             return View();
         }
-        public ActionResult VoteU(Int32 id)
+        public ActionResult VoteU(Int32 id=0)
         {
-            int typesondage;
-            typesondage = BDD.GetTypeSondage(id);
-            if (typesondage < 20)
+            if (Methodes.IsBiggerQueMaxId(id))
+            {
+                return View("Erreur", (object)"ce sondage n'existe pas");
+            }
+            if (id < 1)
+            {
+                return View("Erreur", (object)"adresse non complete");
+            }
+            if (BDD.GetTypeSondage(id) != Constantes.IPUNIQUE)
             {
                 String cookiename = String.Format("Vote{0}", id);
 
@@ -50,17 +58,8 @@ namespace DCSONDAGE_V1.Controllers
                 }
                 else
                 {
-                    List<String> ipEnBDD = new List<string>();
-                    bool ipPresenteEnBDD = false;
-                    ipEnBDD = BDD.GetIp(id);
-                    foreach (var ipCourante in ipEnBDD)
-                    {
-                        if (ipCourante == Request.UserHostAddress.ToString())
-                        {
-                            ipPresenteEnBDD = true;
-                        }
-                    }
-                    if (ipPresenteEnBDD)
+                    List<String> ipEnBDD = BDD.GetIp(id);
+                    if(ipEnBDD.Contains(Request.UserHostAddress.ToString()))
                     {
                         return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
                     }
@@ -75,11 +74,18 @@ namespace DCSONDAGE_V1.Controllers
                 }
             }
         }
-        public ActionResult VoteM(Int32 id)
+
+        public ActionResult VoteM(Int32 id=0)
         {
-            int typesondage;
-            typesondage = BDD.GetTypeSondage(id);
-            if (typesondage < 20)
+            if (Methodes.IsBiggerQueMaxId(id))
+            {
+                return View("Erreur", (object)"ce sondage n'existe pas");
+            }
+            if (id < 1)
+            {
+                return View("Erreur", (object)"adresse non complete");
+            }
+            if (BDD.GetTypeSondage(id) != Constantes.IPMULTIPLE)
             {
                 String cookiename = String.Format("Vote{0}", id);
                 if (Request.Cookies[cookiename] != null)
@@ -103,23 +109,13 @@ namespace DCSONDAGE_V1.Controllers
             }
             else
             {
-                List<String> ipEnBDD = new List<string>();
-                bool ipPresenteEnBDD = false;
-                ipEnBDD = BDD.GetIp(id);
-                foreach (var ipCourante in ipEnBDD)
-                {
-                    if (ipCourante == Request.UserHostAddress.ToString())
-                    {
-                        ipPresenteEnBDD = true;
-                    }
-                }
-                if (ipPresenteEnBDD)
+                List<String> ipEnBDD = BDD.GetIp(id);
+                if (ipEnBDD.Contains(Request.UserHostAddress.ToString()))
                 {
                     return Redirect(string.Format("/Resultat/AffichageResultat/{0}", id));
                 }
                 else
                 {
-
 
                     if (BDD.testSiVoteDesactive(id))
                     {
@@ -134,84 +130,122 @@ namespace DCSONDAGE_V1.Controllers
                     }
                 }
             }
-
-
         }
-        public ActionResult Submit(Int32 radioname, Int32 numSondage)
-        {
-            String cookiename = String.Format("Vote{0}", numSondage);
-            if (Request.Cookies[cookiename] != null)
-            {
-                return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
-            }
-            else
-            {
-                HttpCookie UnCookie = new HttpCookie(cookiename);
-                UnCookie.Value = "A deja voté";
-                UnCookie.Expires = DateTime.Now.AddDays(1);
-                Response.Cookies.Add(UnCookie);
 
-                if (BDD.testSiVoteDesactive(numSondage))
+
+        public ActionResult Submit(Int32 radioname = 0, Int32 numSondage = 0)
+        {
+
+            if ((numSondage < 1) || (radioname < 1))
+            {
+                return View("Erreur", (object)"vous avez oublié de voter");
+            }
+            int typesondage;
+            typesondage = BDD.GetTypeSondage(numSondage);
+            if (typesondage != Constantes.IPUNIQUE)
+            {
+                String cookiename = String.Format("Vote{0}", numSondage);
+
+                if (Request.Cookies[cookiename] != null)
                 {
-                    return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                    return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
                 }
                 else
                 {
-                    int idduVotant = BDD.requeteSqlDepotvotant(Request.UserHostName.ToString());
-                    BDD.requeteSqlDepotDesVotes(radioname, idduVotant);
+                    Methodes.AjoutCookie(numSondage, cookiename);
+
+                    if (BDD.testSiVoteDesactive(numSondage))
+                    {
+                        return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                    }
+                    else
+                    {
+                        Methodes.DepotVoteEtVotantPourChoixUnique(radioname);
+                        return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
+                    }
+                }
+            }
+            else
+            {
+                List<String> ipEnBDD = BDD.GetIp(numSondage);
+                bool test= ipEnBDD.Contains(Request.UserHostAddress.ToString());
+                if (test)
+                {
                     return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
+                }
+                else
+                {
+                    if (BDD.testSiVoteDesactive(numSondage))
+                    {
+                        return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
+                    }
+                    else
+                    {
+                        Methodes.DepotVoteEtVotantPourChoixUnique(radioname);
+                        return Redirect(string.Format("/Resultat/AffichageResultat/{0}", numSondage));
+                    }
                 }
             }
         }
-        public ActionResult AffichageResultat(Int32 id)
+        public ActionResult AffichageResultat(Int32 id=0)
         {
-
+ 
+            if (Methodes.IsBiggerQueMaxId(id))
+            {
+                return View("Erreur", (object)"ce sondage n'existe pas");
+            }
+            if (id < 1)
+            {
+                return View("Erreur", (object)"adresse non complete");
+            }
             AfficheResultat affiche2 = BDD.requeteSqlRecupListeChoixetIdetNbVote(id);
             CreationCammembert cammembert = BDD.requeteSqlPourCammebert(id);
 
-            Chart graphique = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow)
+            Chart diagrammeEnSecteurs = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Diagramme en secteurs")
+                                                                                          .AddSeries("Default", 
 
-             .AddTitle("Diagramme en secteurs")
+                                                                                            chartType: "Pie",// pas changé
 
-             .AddSeries("Default", chartType: "Pie",// pas changé
+                                                                                            xValue: cammembert.listeChoixVote,
+                                                                                            xField: "listeChoixVote", // a changer par nomChoix
 
-            xValue: cammembert.listeChoixVote, xField: "listeChoixVote", // a changer par nomChoix
+                                                                                            yValues: cammembert.listePourcentage, 
+                                                                                            yFields: "ListePourcentage")
 
-            yValues: cammembert.listePourcentage, yFields: "ListePourcentage").Save("~/Content/dessin.jpeg"); //  a changer par la sum des votes de chaque choix
+                                                                                          .Save("~/Content/DiagrammeEnSecteurs.jpeg"); //  a changer par la sum des votes de chaque choix
 
-            Chart graphique2 = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow)
+            Chart histogramme = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Histogramme")
+                                                                                           .AddSeries("Default", // pas changé
 
-             .AddTitle("Histogramme")
+                                                                                                xValue: affiche2.listeNomChoixPourModel, 
+                                                                                                xField: "listeNomChoixPourModel", // a changer par nomChoix
 
-             .AddSeries("Default", // pas changé
+                                                                                                yValues: affiche2.pourcentageParChoixPourModel, 
+                                                                                                yFields: "pourcentageParChoixPourModel")
 
-            xValue: affiche2.listeNomChoixPourModel, xField: "listeNomChoixPourModel", // a changer par nomChoix
-
-            yValues: affiche2.pourcentageParChoixPourModel, yFields: "pourcentageParChoixPourModel").Save("~/Content/dessin2.jpeg"); //  a changer par la sum des votes de chaque choix
+                                                                                            .Save("~/Content/Histogramme.jpeg"); //  a changer par la sum des votes de chaque choix
 
             return View("AffichageResultat", affiche2);
-
         }
 
-
-        public ActionResult Submit2(List<Int32> choix, Int32 idSondage)
+        public ActionResult Submit2(List<Int32> choix, Int32 idSondage=0)
         {
+            if ((idSondage < 1) || (choix == null))
+            {
+                return View("Erreur", (object)"vous avez oublié de voter");
+            }
             int typesondage;
             typesondage = BDD.GetTypeSondage(idSondage);
-            if (typesondage < 20)
+            if (typesondage != Constantes.IPMULTIPLE)
             {
                 String cookiename = String.Format("Vote{0}", idSondage);
                 if (Request.Cookies[cookiename] != null)
                 {
                     return Redirect(string.Format("/Resultat/AffichageResultat/{0}", idSondage));
                 }
-
                 else
                 {
-                    HttpCookie UnCookie = new HttpCookie(cookiename);
-                    UnCookie.Value = "A deja voté";
-                    UnCookie.Expires = DateTime.Now.AddDays(1);
-                    Response.Cookies.Add(UnCookie);
+                    Methodes.AjoutCookie(idSondage, cookiename);
 
                     if (BDD.testSiVoteDesactive(idSondage))
                     {
@@ -227,23 +261,13 @@ namespace DCSONDAGE_V1.Controllers
             }
             else
             {
-                List<String> ipEnBDD = new List<string>();
-                bool ipPresenteEnBDD = false;
-                ipEnBDD = BDD.GetIp(idSondage);
-                foreach (var ipCourante in ipEnBDD)
-                {
-                    if (ipCourante == Request.UserHostAddress.ToString())
-                    {
-                        ipPresenteEnBDD = true;
-                    }
-                }
-                if (ipPresenteEnBDD)
+                List<String> ipEnBDD = BDD.GetIp(idSondage);
+                if (ipEnBDD.Contains(Request.UserHostAddress.ToString()))
                 {
                     return Redirect(string.Format("/Resultat/AffichageResultat/{0}", idSondage));
                 }
                 else
                 {
-
                     if (BDD.testSiVoteDesactive(idSondage))
                     {
                         return View("Erreur", (Object)"Impossible de prendre votre vote en compte le sondage a été desactivé !");
@@ -259,17 +283,13 @@ namespace DCSONDAGE_V1.Controllers
         }
         public ActionResult Suppression(String id)
         {
-
             int idSondage = BDD.rechercheEtDesactivationSondage(id);
 
             if (idSondage == -1)
             {
                 return View("Erreur", (object)"Mauvais lien de supression");
             }
-
-
             return View("Supression");
         }
-
     }
 }

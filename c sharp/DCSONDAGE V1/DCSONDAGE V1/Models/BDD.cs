@@ -324,10 +324,6 @@ namespace DCSONDAGE_V1.Models
             CreationCammembert Affiche = new CreationCammembert(listeChoixVote, ListePourcentage);
             return Affiche;
 
-
-
-
-
         }
 
         public static Int32 GetTypeSondage(Int32 idSondage)
@@ -407,6 +403,13 @@ namespace DCSONDAGE_V1.Models
             AfficheBigBrother surveillance = new AfficheBigBrother(ipEnBDD, choixEnBDD);
             return surveillance;
         }
-
+        public static Int32 GetMaxId()
+        {
+            Connection();
+            SqlCommand requeteSql = new SqlCommand("Select max(numSondage) from  sondage s ", DCConnect);
+            Int32 maxId = (Int32)requeteSql.ExecuteScalar();
+            Deconnection();
+            return maxId;
+        }
     }
 }

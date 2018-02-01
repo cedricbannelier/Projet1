@@ -17,7 +17,7 @@
 <body class="container">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.html"><img src="logo.png" alt="Logo DCSondage"> </a>
+        <a href="~/home/index"><img src="~/Content/logo.png" alt="Logo DCSondage"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,13 +38,13 @@
         </div>
     </nav>
     <header>
-        <a href="index.html"><img src="dcS_White_Transparent.png" alt="Logo DCSondage" id="banniere_image"> </a>
+        <a href="~/home/index"><img src="~/Content/dcS_White_Transparent.png" alt="Logo DCSondage" id="banniere_image"> </a>
     </header>
 
     <br />
     <h3>Veuillez selectionner au minimum un choix de réponse.</h3>
     <p>Sondage choix multiple</p>
-    <p>@Model.nomSondage</p>
+    <p><h3>@Model.nomSondage</h3></p>
     <br />
     <form action="/Resultat/Submit2" method="post">
 

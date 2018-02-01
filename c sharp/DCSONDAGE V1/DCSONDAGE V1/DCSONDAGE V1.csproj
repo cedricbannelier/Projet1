@@ -118,8 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\dcS_White_Transparent.png" />
-    <Content Include="Content\dessin.jpeg" />
-    <Content Include="Content\dessin2.jpeg" />
+    <Content Include="Content\DiagrammeEnSecteurs.jpeg" />
+    <Content Include="Content\Histogramme.jpeg" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
@@ -139,8 +139,10 @@
     <Compile Include="Models\BDD.cs" />
     <Compile Include="Models\AfficheVote.cs" />
     <Compile Include="Models\AfficheBigBrother.cs" />
+    <Compile Include="Models\Constantes.cs" />
     <Compile Include="Models\CreationCammembert.cs" />
     <Compile Include="Models\Lien.cs" />
+    <Compile Include="Models\Methodes.cs" />
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,8 +153,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Home\Creation.cshtml" />
-    <Content Include="Views\Test\Test.cshtml" />
-    <Content Include="Views\Liens.cshtml" />
     <Content Include="Views\Home\Liens.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Resultat\VoteU.cshtml" />
