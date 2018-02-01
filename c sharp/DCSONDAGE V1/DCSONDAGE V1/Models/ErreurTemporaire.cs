@@ -9,10 +9,18 @@ namespace DCSONDAGE_V1.Models
     {
         public Int32 IdSondage { get; set; }
         public String MessageDErreur { get; set; }
-        public ErreurTemporaire(Int32 id,string message)
+        public String Redirectionresultat { get; set; }
+        public ErreurTemporaire(Int32 id, String message)
         {
             IdSondage = id;
-            MessageDErreur = message; 
+            MessageDErreur = message;
+            Redirectionresultat = "AffichageResultat";
+        }
+        public ErreurTemporaire(Int32 id, string message, String redirectionVote)
+        {
+            IdSondage = id;
+            MessageDErreur = message;
+            Redirectionresultat = redirectionVote;
         }
     }
 }

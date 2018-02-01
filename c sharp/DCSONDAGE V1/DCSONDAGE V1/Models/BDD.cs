@@ -9,7 +9,8 @@ namespace DCSONDAGE_V1.Models
 {
     public class BDD
     {
-        public static string SQlConnectString = @"server=.\SQLEXPRESS;Database=projet;Trusted_Connection=Yes";
+       // public static string SQlConnectString = @"server=.\SQLEXPRESS;Database=projet;Trusted_Connection=Yes"; 
+        public static string SQlConnectString = @"server=172.19.240.123;Database=DCSondage;user id=sa;password=pf68*CCI";
 
         public static SqlConnection DCConnect = new SqlConnection(SQlConnectString);
         public static void Connection()

@@ -153,7 +153,8 @@ namespace DCSONDAGE_V1.Controllers
         {
             if ((idSondage < 1) || (choix == null))
             {
-                return View("Erreur", (object)"vous avez oublié de voter");
+                ErreurTemporaire oublieVote = new ErreurTemporaire(idSondage, "Vous n'avez pas voté!\nVous serez redirigé vers la page de vote dans 3 secondes", "Vote");
+                return View("ErreurTemporaire", oublieVote);
             }
             int typesondage;
             typesondage = BDD.GetTypeSondage(idSondage);
@@ -214,6 +215,10 @@ namespace DCSONDAGE_V1.Controllers
                 return View("Erreur", (object)"Mauvais lien de supression");
             }
             return View("Supression", (object)Convert.ToString(idSondage));
+        }
+        public ActionResult Rechercher()
+        {
+            return View("Erreur", (object)"En cours de devellopement");
         }
     }
 }

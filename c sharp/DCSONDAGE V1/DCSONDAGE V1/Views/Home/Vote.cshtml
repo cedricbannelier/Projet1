@@ -43,7 +43,15 @@
 
     <br />
     <h3>Veuillez selectionner au minimum un choix de réponse.</h3>
-    <p>Sondage choix multiple</p>
+    @{if (Model.typeSondage % 10 == 0)
+        {
+            <p>Sondage à choix multiple</p>
+        }
+        else
+        {
+            <p>Sondage à choix unique</p>
+        }
+    }
     <p><h3>@Model.nomSondage</h3></p>
     <br />
     <form action="/Home/SubmitVote" method="post">
@@ -51,7 +59,7 @@
 
 
         <input type="hidden" name="idSondage" value="@Model.numSondage" />
-        @{ if (@Model.typeSondage % 10 == 0)
+        @{ if (Model.typeSondage % 10 == 0)
             {
                 Int32 i = 0;
                 foreach (var ligne in Model.listeNumChoix)
@@ -71,7 +79,7 @@
                     <p>
                         <input type="radio" id="@Model.listeNumChoix.ElementAt(i)" value=@Model.listeNumChoix.ElementAt(i) name="choix">
                         <label for="@Model.listeNumChoix.ElementAt(i)">@Model.listeNomChoix.ElementAt(i)</label>
-                        
+
                     </p>
                     i++;
                 }
@@ -85,7 +93,7 @@
 
             </div>
             <div>
-                
+
             </div>
 
         </div>
