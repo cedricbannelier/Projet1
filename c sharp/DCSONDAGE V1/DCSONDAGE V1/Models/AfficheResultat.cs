@@ -22,5 +22,13 @@ namespace DCSONDAGE_V1.Models
             voteParChoixPourModel = voteParChoix;
             pourcentageParChoixPourModel = pourcentageParChoix;
         }
+        public AfficheResultat(int idSondage, String nomSondage, List<String> listeNomChoix, List<Int32> voteParChoix, List<double> pourcentageParChoix)
+        {
+            listeNomChoixPourModel = listeNomChoix;
+            nomSondagePourModel = nomSondage;
+            numSondagePourModel = idSondage;
+            voteParChoixPourModel = voteParChoix;
+            pourcentageParChoixPourModel = pourcentageParChoix;
+        }
     }
 }

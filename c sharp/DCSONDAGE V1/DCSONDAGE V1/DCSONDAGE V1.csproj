@@ -161,6 +161,7 @@
     <Content Include="Views\Big\AffichageResultat.cshtml" />
     <Content Include="Views\Home\Erreur.cshtml" />
     <Content Include="Views\Home\Vote.cshtml" />
+    <Content Include="Views\Home\Recherche.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

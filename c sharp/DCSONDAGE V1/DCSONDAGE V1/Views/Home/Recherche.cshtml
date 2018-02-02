@@ -1,4 +1,4 @@
-﻿@model DCSONDAGE_V1.Models.AfficheResultat
+﻿@model List<Int32>
 @{
     Layout = null;
 }
@@ -30,11 +30,11 @@
                     <a class="nav-link" href="#">S'enregistrer</a>
                 </li>
             </ul>
-            
-                <form action="/Home/Rechercher" method="post" class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-                </form>
+
+            <form action="/Home/Rechercher" method="post" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
         </div>
     </nav>
     <header>
@@ -42,32 +42,29 @@
     </header>
 
     <br />
-    <h3>Resultat du sondage</h3>
-    <br />
-    <h3> @Model.nomSondagePourModel</h3>
+    <h3>Resultat du sondage </h3>
     <br />
 
-        <div class="centrerTableau">
+    <div class="centrerTableau">
 
-                <table class="table table-hover table-warning">
-                    <tr>
-                        <th>Choix</th>
-                        <th>Nombre de vote</th>
-                        <th>Pourcentage</th>
-                    </tr>
-                    @{int i = 0; }
-                    @foreach (var nomChoix in Model.listeNomChoixPourModel)
-                        {
-                        <tr>
-                            <td>@nomChoix</td>
-                            <td>@Model.voteParChoixPourModel.ElementAt(i)</td>
-                            <td>@Model.pourcentageParChoixPourModel.ElementAt(i) %</td>
-                        </tr>
-                        i++;
-                    }
-                </table>
+        <table class="table table-hover table-warning">
+            <tr>
+                <th>ID Sondage</th>
+                
+                
+            </tr>
+           @{foreach (var Ligne in @Model)
+               {
+                <tr>
+                    <td>ligne</td>
+                </tr>
+               }
 
-        </div>
+        }
+
+        </table>
+
+    </div>
 
     <p><img src="~/Content/Histogramme.jpeg"> <img src="~/Content/DiagrammeEnSecteurs.jpeg"></p>
 
@@ -87,3 +84,4 @@
 
 </body>
 </html>
+

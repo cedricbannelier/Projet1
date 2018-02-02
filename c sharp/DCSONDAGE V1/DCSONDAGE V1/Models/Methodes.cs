@@ -19,6 +19,12 @@ namespace DCSONDAGE_V1.Models
                 return false;
             }
         }
+        /// <summary>
+        /// creer un cokkie et l'envoi au client
+        /// cette methodes est utilisé dans HomeController/SubmitVote
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="cookiename"></param>
         public static void AjoutCookie(Int32 id, string cookiename)
         {
             HttpCookie UnCookie = new HttpCookie(cookiename);
