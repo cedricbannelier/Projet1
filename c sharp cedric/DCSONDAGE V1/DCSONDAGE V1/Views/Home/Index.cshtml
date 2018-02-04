@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<!-- Debut du head -->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="~/Content/style.css" />
+</head>
+<!-- Fin du head -->
+<!-- Debut du body -->
+<body class="container">
+
+    <!-- Debut de la barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="~/home/index"><img src="~/Content/logo.png" alt="Logo DCSondage"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Se connecter<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S'enregistrer</a>
+                </li>
+            </ul>
+            <form action="/Home/Rechercher" method="post" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Search" name="entreeUtilisateur">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Fin de la barre de navigation -->
+
+    <header>
+        <a href="~/home/index"><img src="~/Content/dcS_White_Transparent.png" alt="Logo DCSondage" id="banniere_image"> </a>
+    </header>
+
+    <br />
+    <h3>Bienvenue sur le site DC Sondage</h3><br />
+    <h3>Vous pouvez créer un sondage gratuitement</h3>
+    <br />
+
+    <a href="~/home/creation"><input value="Création d'un sondage" type="button" class="btn btn-warning btn-block"></a>
+
+    <footer class="form-group col-lg-5 center">
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique d'accessibilité</a></li>
+        </ul>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+
+<!-- Fin du body -->
+</html>

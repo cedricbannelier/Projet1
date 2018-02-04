@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="adresseLien1 propri&#233;t&#233;" Url="html/7ed5e060-3e18-3c75-595e-3d316ef6ce8e.htm" />
+  <HelpKINode Title="adresseLien2 propri&#233;t&#233;" Url="html/3016996b-b316-4820-d95c-5cc3d669ada7.htm" />
+  <HelpKINode Title="adresseLien3 propri&#233;t&#233;" Url="html/1121e816-16e9-afa7-cf01-66e2f613d3dc.htm" />
+  <HelpKINode Title="AffichageResultat m&#233;thode" Url="html/63839c36-5f01-9770-2fe7-f8f4bc819538.htm" />
+  <HelpKINode Title="AfficheBigBrother classe">
+    <HelpKINode Title="AfficheBigBrother Classe" Url="html/f4fbc978-1611-8dd3-ec2b-b3a5ac33a3a5.htm" />
+    <HelpKINode Title="constructeur" Url="html/a72d3847-6599-b25a-3805-60fad9c95d03.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/6b00ff63-a86d-9e24-f63c-7dee5f14fb8c.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/af0e78d0-3b49-e84f-5068-4a98cf9648ce.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AfficheBigBrother.AfficheBigBrother constructeur" Url="html/a72d3847-6599-b25a-3805-60fad9c95d03.htm" />
+  <HelpKINode Title="AfficheBigBrother.listeDesNomChoix propri&#233;t&#233;" Url="html/02b75eba-7a4b-393d-f07a-aeff0b7d4bc4.htm" />
+  <HelpKINode Title="AfficheBigBrother.listeDesVotant propri&#233;t&#233;" Url="html/de4c8e57-af48-e814-faca-a9e3cc177469.htm" />
+  <HelpKINode Title="AfficheResultat classe">
+    <HelpKINode Title="AfficheResultat Classe" Url="html/d6ee4c05-51d4-21fd-ad12-a1cfd2aa15f5.htm" />
+    <HelpKINode Title="constructeur" Url="html/cf7f9e74-8e41-409f-b816-15faf7e8e628.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/d6e27c32-27d9-7bb5-1621-78292d5edd11.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/528b2383-5799-fec0-5c81-999165f47861.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AfficheResultat.AfficheResultat constructeur" Url="html/cf7f9e74-8e41-409f-b816-15faf7e8e628.htm" />
+  <HelpKINode Title="AfficheResultat.listeNomChoixPourModel propri&#233;t&#233;" Url="html/cda45d1a-abf1-7fcb-2c04-7e82cd25af2e.htm" />
+  <HelpKINode Title="AfficheResultat.listeNumChoixPourModel propri&#233;t&#233;" Url="html/b21bbd79-99cb-8319-7569-a81e44ca71cb.htm" />
+  <HelpKINode Title="AfficheResultat.nomSondagePourModel propri&#233;t&#233;" Url="html/832afa7a-5036-a7b6-1d1a-12d5151ca15d.htm" />
+  <HelpKINode Title="AfficheResultat.numSondagePourModel propri&#233;t&#233;" Url="html/52ffade8-6a02-dc50-5a24-2db30f21a598.htm" />
+  <HelpKINode Title="AfficheResultat.pourcentageParChoixPourModel propri&#233;t&#233;" Url="html/6d6385d7-c5c6-6579-dcd0-78855a0c2bf4.htm" />
+  <HelpKINode Title="AfficheResultat.voteParChoixPourModel propri&#233;t&#233;" Url="html/1b1e8dc6-d980-425e-29d6-91584faf25fd.htm" />
+  <HelpKINode Title="AfficheVote classe">
+    <HelpKINode Title="AfficheVote Classe" Url="html/18932120-a928-de48-7cc7-8bf67a73cb43.htm" />
+    <HelpKINode Title="constructeur" Url="html/88585881-48dc-8ae6-bfb2-0fbadb861e15.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/69f24b6c-6863-a7b0-82eb-c2ba7a37d042.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/c97b65e3-bd27-4010-0d32-311de015bfde.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AfficheVote.AfficheVote constructeur" Url="html/88585881-48dc-8ae6-bfb2-0fbadb861e15.htm" />
+  <HelpKINode Title="AfficheVote.ajoutNbVotant m&#233;thode" Url="html/510d0836-7e74-5f1f-4532-5397710ec47a.htm" />
+  <HelpKINode Title="AfficheVote.ajoutNomSondage m&#233;thode" Url="html/f169e40f-6d4b-81ee-8677-9631f76c1700.htm" />
+  <HelpKINode Title="AfficheVote.listeNomChoix propri&#233;t&#233;" Url="html/3b99dd81-9529-1a64-0ef6-5d2480307ad7.htm" />
+  <HelpKINode Title="AfficheVote.listeNumChoix propri&#233;t&#233;" Url="html/751e9b25-c779-54d3-16f1-9208d4ba2dc2.htm" />
+  <HelpKINode Title="AfficheVote.nombreDeVotant propri&#233;t&#233;" Url="html/74369824-c0d8-627b-1ca1-13aea96f4d82.htm" />
+  <HelpKINode Title="AfficheVote.nomSondage propri&#233;t&#233;" Url="html/5389f8d1-9618-605f-9970-87d1dbe194df.htm" />
+  <HelpKINode Title="AfficheVote.numSondage propri&#233;t&#233;" Url="html/3d7a385d-2515-c516-b656-32064a6a120f.htm" />
+  <HelpKINode Title="AfficheVote.typeSondage propri&#233;t&#233;" Url="html/6bafc53b-cd92-607c-f34c-41f24ef06ea0.htm" />
+  <HelpKINode Title="AjoutCookie m&#233;thode" Url="html/6992a86e-975d-0a74-f311-23db8ed177f6.htm" />
+  <HelpKINode Title="ajoutNbVotant m&#233;thode" Url="html/510d0836-7e74-5f1f-4532-5397710ec47a.htm" />
+  <HelpKINode Title="ajoutNomSondage m&#233;thode" Url="html/f169e40f-6d4b-81ee-8677-9631f76c1700.htm" />
+  <HelpKINode Title="Application_Start m&#233;thode" Url="html/3ea0122f-afd9-24c8-c52a-372dc1b78f29.htm" />
+  <HelpKINode Title="BDD classe">
+    <HelpKINode Title="BDD Classe" Url="html/39762d73-c0b6-04ab-39bf-24ed828cc74a.htm" />
+    <HelpKINode Title="champs" Url="html/b8170e2f-58b7-4b5a-cff6-3c16be4cb10b.htm" />
+    <HelpKINode Title="constructeur" Url="html/282b1d09-2c2e-e85b-629a-38e1f21a428e.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/d177f11e-6c15-812f-9bc8-45b644dbb40d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BDD.BDD constructeur" Url="html/282b1d09-2c2e-e85b-629a-38e1f21a428e.htm" />
+  <HelpKINode Title="BDD.BigBrotherIP m&#233;thode" Url="html/2b7e58ae-f82c-b4ea-dea1-5a5a278a95be.htm" />
+  <HelpKINode Title="BDD.Connection m&#233;thode" Url="html/60456e51-7f37-253e-6681-25b48d53666c.htm" />
+  <HelpKINode Title="BDD.Deconnection m&#233;thode" Url="html/a13b4906-ec58-e9f2-15ad-ee9bf7942cf7.htm" />
+  <HelpKINode Title="BDD.GetIdSondageParGuid m&#233;thode" Url="html/bb3dba72-254d-cc58-4a8e-8585abac442d.htm" />
+  <HelpKINode Title="BDD.GetIp m&#233;thode" Url="html/a1394265-81df-4559-67e3-b740d7968f04.htm" />
+  <HelpKINode Title="BDD.GetListeChoixetId m&#233;thode" Url="html/61d1f7c2-be0f-a618-86da-3abe3f46358a.htm" />
+  <HelpKINode Title="BDD.GetMaxId m&#233;thode" Url="html/2976036a-374f-5e80-535a-3a8e00520862.htm" />
+  <HelpKINode Title="BDD.GetNomSondage m&#233;thode" Url="html/9dd1bd5b-89a6-adf6-bbb3-3c70796cbe39.htm" />
+  <HelpKINode Title="BDD.GetTypeSondage m&#233;thode" Url="html/edd2cd44-69e7-9769-6fbf-1d09643bb734.htm" />
+  <HelpKINode Title="BDD.RechercheEtDesactivationSondage m&#233;thode" Url="html/cefed9e4-95b2-f4e4-f9eb-e0f61cd10ddf.htm" />
+  <HelpKINode Title="BDD.RequeteAjoutSqlSondage m&#233;thode" Url="html/6d9833a1-c584-7a0b-5369-6a88264fa67d.htm" />
+  <HelpKINode Title="BDD.RequeteSqlDepotDesVotesMultiple m&#233;thode" Url="html/f6f820ee-966f-0eeb-c4f3-a541fdbf6bee.htm" />
+  <HelpKINode Title="BDD.RequeteSqlDepotvotant m&#233;thode" Url="html/0d15f2fe-6cc5-4d72-12fd-247c4b7cf640.htm" />
+  <HelpKINode Title="BDD.RequeteSqlPourCamembert m&#233;thode" Url="html/62b74e6f-dade-f0b4-f4c8-d520694b4ed9.htm" />
+  <HelpKINode Title="BDD.RequeteSqlRecupListeChoixetIdetNbVote m&#233;thode" Url="html/7b98edab-1e62-1817-356a-5d16e29da935.htm" />
+  <HelpKINode Title="BDD.RequeteSqlRecupNbVotant m&#233;thode" Url="html/6a903f4e-e9a0-2e6a-3575-73572d366c79.htm" />
+  <HelpKINode Title="BDD.RequeteSqlUpdateType m&#233;thode" Url="html/073a8c9e-64c7-acb6-44ef-541eeba537d6.htm" />
+  <HelpKINode Title="BDD.RequetteAjoutSqlChoix m&#233;thode" Url="html/44c237b8-c6d2-1bb1-9c36-ab98ebcf8ae2.htm" />
+  <HelpKINode Title="BDD.RequetteAjoutSqlLienSuppr m&#233;thode" Url="html/8bc575e9-63d4-47cf-b803-eaa323862d6d.htm" />
+  <HelpKINode Title="BDD.SQlConnectString champ" Url="html/91a14809-aabe-67f8-2f08-729d67c201a6.htm" />
+  <HelpKINode Title="BDD.TestSiVoteDesactive m&#233;thode" Url="html/53674d87-2b88-6864-06f8-202a903995e9.htm" />
+  <HelpKINode Title="BigBrotherIP m&#233;thode" Url="html/2b7e58ae-f82c-b4ea-dea1-5a5a278a95be.htm" />
+  <HelpKINode Title="BigController classe">
+    <HelpKINode Title="BigController Classe" Url="html/8cd509f6-a088-17eb-c3d8-b15a7cf7c1a6.htm" />
+    <HelpKINode Title="constructeur" Url="html/e9a88ed4-3f86-6628-baa4-88d5b3ce370f.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/8307c388-71d4-4f26-7020-d207316f768c.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/0af45264-518d-9e3a-2940-4fce1c80cf6c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BigController.BigController constructeur" Url="html/e9a88ed4-3f86-6628-baa4-88d5b3ce370f.htm" />
+  <HelpKINode Title="BigController.Brother m&#233;thode" Url="html/4627f546-bb87-3c0a-079e-3d78ced5d93f.htm" />
+  <HelpKINode Title="Brother m&#233;thode" Url="html/4627f546-bb87-3c0a-079e-3d78ced5d93f.htm" />
+  <HelpKINode Title="Connection m&#233;thode" Url="html/60456e51-7f37-253e-6681-25b48d53666c.htm" />
+  <HelpKINode Title="Constantes classe">
+    <HelpKINode Title="Constantes Classe" Url="html/9db5e915-d35b-fa7e-5b7e-381e6cf6196f.htm" />
+    <HelpKINode Title="champs" Url="html/84c891ab-a144-e173-d5e2-fb1a73063472.htm" />
+    <HelpKINode Title="constructeur" Url="html/912abd29-7f29-3ed6-f752-3f16226351a1.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/e52f161b-4c95-6cb0-6a0b-ffec04d9cfda.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Constantes.Constantes constructeur" Url="html/912abd29-7f29-3ed6-f752-3f16226351a1.htm" />
+  <HelpKINode Title="Constantes.COOKIEMULTIPLE champ" Url="html/f5e18d53-9afd-1e2f-fb36-af8bf50f8443.htm" />
+  <HelpKINode Title="Constantes.COOKIEUNIQUE champ" Url="html/7187de29-60b7-977f-af14-b8ba14ef6df3.htm" />
+  <HelpKINode Title="Constantes.IPMULTIPLE champ" Url="html/7c82fdfd-4f50-0296-fd54-f469083287d8.htm" />
+  <HelpKINode Title="Constantes.IPUNIQUE champ" Url="html/fa1c69bf-c93e-4147-32ae-ad32dd3a10a6.htm" />
+  <HelpKINode Title="Constantes.MINCHOIX champ" Url="html/dde760be-099e-6a50-f2c9-75111ab10b9b.htm" />
+  <HelpKINode Title="Constantes.SONDAGEDESACTIVE champ" Url="html/caac966d-1734-161d-95a1-cb3d5c946ee8.htm" />
+  <HelpKINode Title="COOKIEMULTIPLE champ" Url="html/f5e18d53-9afd-1e2f-fb36-af8bf50f8443.htm" />
+  <HelpKINode Title="COOKIEUNIQUE champ" Url="html/7187de29-60b7-977f-af14-b8ba14ef6df3.htm" />
+  <HelpKINode Title="Creation m&#233;thode" Url="html/097d9a83-36ed-1f8e-aca0-9deb455388eb.htm" />
+  <HelpKINode Title="CreationCamembert classe">
+    <HelpKINode Title="CreationCamembert Classe" Url="html/2ab26067-6748-3cfd-85cb-db8d85a16a5b.htm" />
+    <HelpKINode Title="constructeur" Url="html/aee37be7-7be6-69ef-2c97-8c8963da7ce8.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/9bdc33a3-6498-c61b-7888-2d7916832374.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/1ef5d400-45be-7c6e-b409-9c777515cd28.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreationCamembert.CreationCamembert constructeur" Url="html/aee37be7-7be6-69ef-2c97-8c8963da7ce8.htm" />
+  <HelpKINode Title="CreationCamembert.listeChoixVote propri&#233;t&#233;" Url="html/0d281468-4c0d-e5f4-ea12-611b548150c9.htm" />
+  <HelpKINode Title="CreationCamembert.listePourcentage propri&#233;t&#233;" Url="html/58bf3546-73ce-8ac3-cf03-96a29002bc7c.htm" />
+  <HelpKINode Title="DCSONDAGE_V1 espace de nom" Url="html/36eda91a-a1ea-2acc-5355-73e73279bdd8.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Controllers espace de nom" Url="html/a28768c9-7b7b-95ac-506f-ccdbb8c6b468.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Controllers.BigController classe" Url="html/8cd509f6-a088-17eb-c3d8-b15a7cf7c1a6.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Controllers.HomeController classe" Url="html/d3d7cd36-ed78-5a0e-369f-e84edc8ebb93.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models espace de nom" Url="html/28093763-c62e-5476-d994-f21f1689a8ee.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.AfficheBigBrother classe" Url="html/f4fbc978-1611-8dd3-ec2b-b3a5ac33a3a5.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.AfficheResultat classe" Url="html/d6ee4c05-51d4-21fd-ad12-a1cfd2aa15f5.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.AfficheVote classe" Url="html/18932120-a928-de48-7cc7-8bf67a73cb43.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.BDD classe" Url="html/39762d73-c0b6-04ab-39bf-24ed828cc74a.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.Constantes classe" Url="html/9db5e915-d35b-fa7e-5b7e-381e6cf6196f.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.CreationCamembert classe" Url="html/2ab26067-6748-3cfd-85cb-db8d85a16a5b.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.ErreurTemporaire classe" Url="html/9f0f303d-4813-50ef-a11d-a59ec8399dd2.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.Lien classe" Url="html/bb7fa6e2-065b-94b8-e127-2b6d26a5bda4.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.Methodes classe" Url="html/382529f9-335e-fae9-05cc-f51c32591f15.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.Models.Vote classe" Url="html/fceaafe9-b46b-d5be-c196-55e0278b3047.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.MvcApplication classe" Url="html/0373646e-36c8-b076-47e6-fd673f5229f1.htm" />
+  <HelpKINode Title="DCSONDAGE_V1.RouteConfig classe" Url="html/75146576-3f8b-73dd-9d4e-e33d9aedb6b4.htm" />
+  <HelpKINode Title="Deconnection m&#233;thode" Url="html/a13b4906-ec58-e9f2-15ad-ee9bf7942cf7.htm" />
+  <HelpKINode Title="ErreurTemporaire classe">
+    <HelpKINode Title="ErreurTemporaire Classe" Url="html/9f0f303d-4813-50ef-a11d-a59ec8399dd2.htm" />
+    <HelpKINode Title="constructeur" Url="html/93f79ace-d7db-33e3-96da-56dacae12a5e.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/5b6a4929-1a0a-c213-385c-40c6a25abaf5.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/a71722cc-aa60-c2bf-9c97-ebf9aa5fb414.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ErreurTemporaire.ErreurTemporaire constructeur" Url="html/93f79ace-d7db-33e3-96da-56dacae12a5e.htm" />
+  <HelpKINode Title="ErreurTemporaire.IdSondage propri&#233;t&#233;" Url="html/c5927af2-8003-a178-4a60-4423835b1019.htm" />
+  <HelpKINode Title="ErreurTemporaire.MessageDErreur propri&#233;t&#233;" Url="html/6201e55d-0312-f2aa-c8d1-8e80d835dcb9.htm" />
+  <HelpKINode Title="ErreurTemporaire.Redirectionresultat propri&#233;t&#233;" Url="html/8aef63a7-dcea-f4ca-195b-ddb94ad38d46.htm" />
+  <HelpKINode Title="GetIdSondageParGuid m&#233;thode" Url="html/bb3dba72-254d-cc58-4a8e-8585abac442d.htm" />
+  <HelpKINode Title="GetIp m&#233;thode" Url="html/a1394265-81df-4559-67e3-b740d7968f04.htm" />
+  <HelpKINode Title="GetListeChoixetId m&#233;thode" Url="html/61d1f7c2-be0f-a618-86da-3abe3f46358a.htm" />
+  <HelpKINode Title="GetMaxId m&#233;thode" Url="html/2976036a-374f-5e80-535a-3a8e00520862.htm" />
+  <HelpKINode Title="GetNomSondage m&#233;thode" Url="html/9dd1bd5b-89a6-adf6-bbb3-3c70796cbe39.htm" />
+  <HelpKINode Title="GetTypeSondage m&#233;thode" Url="html/edd2cd44-69e7-9769-6fbf-1d09643bb734.htm" />
+  <HelpKINode Title="Guidsuppression propri&#233;t&#233;" Url="html/54dc4fbc-e854-54af-89f8-8d9591374675.htm" />
+  <HelpKINode Title="HomeController classe">
+    <HelpKINode Title="HomeController Classe" Url="html/d3d7cd36-ed78-5a0e-369f-e84edc8ebb93.htm" />
+    <HelpKINode Title="constructeur" Url="html/1e9ad5ea-fbbb-69d3-7997-cd6b48295b27.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/3482f0e2-c607-ea67-6956-2c05a0319dc5.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/74d6266f-3014-e7fa-0b91-fea1f5c4fd49.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HomeController.AffichageResultat m&#233;thode" Url="html/63839c36-5f01-9770-2fe7-f8f4bc819538.htm" />
+  <HelpKINode Title="HomeController.Creation m&#233;thode" Url="html/097d9a83-36ed-1f8e-aca0-9deb455388eb.htm" />
+  <HelpKINode Title="HomeController.HomeController constructeur" Url="html/1e9ad5ea-fbbb-69d3-7997-cd6b48295b27.htm" />
+  <HelpKINode Title="HomeController.Index m&#233;thode" Url="html/d67af1de-bfc5-301a-2528-da86be7ee696.htm" />
+  <HelpKINode Title="HomeController.Liens m&#233;thode" Url="html/31028210-b91e-368c-f796-a13d6a69fa88.htm" />
+  <HelpKINode Title="HomeController.Rechercher m&#233;thode" Url="html/19c8cdb9-52ad-497d-22b8-a586cb7c7196.htm" />
+  <HelpKINode Title="HomeController.Submit m&#233;thode" Url="html/b4c13191-cb9e-638a-e6b2-fb4ffb11eef3.htm" />
+  <HelpKINode Title="HomeController.SubmitVote m&#233;thode" Url="html/2699fe2c-ed36-2a65-7ff7-018b750d1dda.htm" />
+  <HelpKINode Title="HomeController.Suppression m&#233;thode" Url="html/5f8e0b3a-547c-c14d-3751-897f13fe37d1.htm" />
+  <HelpKINode Title="HomeController.Vote m&#233;thode" Url="html/04c4aa3d-17ef-8c1f-a85d-e49e3574494d.htm" />
+  <HelpKINode Title="IdSondage propri&#233;t&#233;" Url="html/c5927af2-8003-a178-4a60-4423835b1019.htm" />
+  <HelpKINode Title="Index m&#233;thode" Url="html/d67af1de-bfc5-301a-2528-da86be7ee696.htm" />
+  <HelpKINode Title="IPMULTIPLE champ" Url="html/7c82fdfd-4f50-0296-fd54-f469083287d8.htm" />
+  <HelpKINode Title="IPUNIQUE champ" Url="html/fa1c69bf-c93e-4147-32ae-ad32dd3a10a6.htm" />
+  <HelpKINode Title="IsBiggerQueMaxId m&#233;thode" Url="html/df04e0de-7c07-f328-63c5-29ad0777929f.htm" />
+  <HelpKINode Title="Lien classe">
+    <HelpKINode Title="Lien Classe" Url="html/bb7fa6e2-065b-94b8-e127-2b6d26a5bda4.htm" />
+    <HelpKINode Title="constructeur" Url="html/92889ea6-0c8e-389c-a823-268d97589120.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/bbff9b38-f0c2-7573-a49d-d47b40e470de.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/f5023b26-a5f3-a07d-8b4d-fbedd57f0b05.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Lien.adresseLien1 propri&#233;t&#233;" Url="html/7ed5e060-3e18-3c75-595e-3d316ef6ce8e.htm" />
+  <HelpKINode Title="Lien.adresseLien2 propri&#233;t&#233;" Url="html/3016996b-b316-4820-d95c-5cc3d669ada7.htm" />
+  <HelpKINode Title="Lien.adresseLien3 propri&#233;t&#233;" Url="html/1121e816-16e9-afa7-cf01-66e2f613d3dc.htm" />
+  <HelpKINode Title="Lien.Guidsuppression propri&#233;t&#233;" Url="html/54dc4fbc-e854-54af-89f8-8d9591374675.htm" />
+  <HelpKINode Title="Lien.Lien constructeur" Url="html/92889ea6-0c8e-389c-a823-268d97589120.htm" />
+  <HelpKINode Title="Lien.nomSondage propri&#233;t&#233;" Url="html/6bc2e245-b1c6-4cdf-c001-916ae79419e9.htm" />
+  <HelpKINode Title="Lien.TypeSondage propri&#233;t&#233;" Url="html/965d01d5-ecc0-75a7-0f7d-c8db568b2c5e.htm" />
+  <HelpKINode Title="Liens m&#233;thode" Url="html/31028210-b91e-368c-f796-a13d6a69fa88.htm" />
+  <HelpKINode Title="listeChoixVote propri&#233;t&#233;" Url="html/0d281468-4c0d-e5f4-ea12-611b548150c9.htm" />
+  <HelpKINode Title="listeDesNomChoix propri&#233;t&#233;" Url="html/02b75eba-7a4b-393d-f07a-aeff0b7d4bc4.htm" />
+  <HelpKINode Title="listeDesVotant propri&#233;t&#233;" Url="html/de4c8e57-af48-e814-faca-a9e3cc177469.htm" />
+  <HelpKINode Title="listeNomChoix propri&#233;t&#233;" Url="html/3b99dd81-9529-1a64-0ef6-5d2480307ad7.htm" />
+  <HelpKINode Title="listeNomChoixPourModel propri&#233;t&#233;" Url="html/cda45d1a-abf1-7fcb-2c04-7e82cd25af2e.htm" />
+  <HelpKINode Title="listeNumChoix propri&#233;t&#233;" Url="html/751e9b25-c779-54d3-16f1-9208d4ba2dc2.htm" />
+  <HelpKINode Title="listeNumChoixPourModel propri&#233;t&#233;" Url="html/b21bbd79-99cb-8319-7569-a81e44ca71cb.htm" />
+  <HelpKINode Title="listePourcentage propri&#233;t&#233;" Url="html/58bf3546-73ce-8ac3-cf03-96a29002bc7c.htm" />
+  <HelpKINode Title="MessageDErreur propri&#233;t&#233;" Url="html/6201e55d-0312-f2aa-c8d1-8e80d835dcb9.htm" />
+  <HelpKINode Title="Methodes classe">
+    <HelpKINode Title="Methodes Classe" Url="html/382529f9-335e-fae9-05cc-f51c32591f15.htm" />
+    <HelpKINode Title="constructeur" Url="html/882fabd5-9033-d427-98d0-67e96631aabc.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/9f54746c-d84f-209f-39e0-92afe073d116.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Methodes.AjoutCookie m&#233;thode" Url="html/6992a86e-975d-0a74-f311-23db8ed177f6.htm" />
+  <HelpKINode Title="Methodes.IsBiggerQueMaxId m&#233;thode" Url="html/df04e0de-7c07-f328-63c5-29ad0777929f.htm" />
+  <HelpKINode Title="Methodes.Methodes constructeur" Url="html/882fabd5-9033-d427-98d0-67e96631aabc.htm" />
+  <HelpKINode Title="MINCHOIX champ" Url="html/dde760be-099e-6a50-f2c9-75111ab10b9b.htm" />
+  <HelpKINode Title="MvcApplication classe">
+    <HelpKINode Title="MvcApplication Classe" Url="html/0373646e-36c8-b076-47e6-fd673f5229f1.htm" />
+    <HelpKINode Title="constructeur" Url="html/397adb21-317c-a533-428a-8a4b2a57627a.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/5d926607-7a96-fad8-0b41-bb1bbdce46dc.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/c5b71196-aee5-cd25-38ad-c732fe9e557d.htm" />
+    <HelpKINode Title="&#233;v&#233;nements" Url="html/87043d52-441e-62c0-afab-8a6aff66beaa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MvcApplication.Application_Start m&#233;thode" Url="html/3ea0122f-afd9-24c8-c52a-372dc1b78f29.htm" />
+  <HelpKINode Title="MvcApplication.MvcApplication constructeur" Url="html/397adb21-317c-a533-428a-8a4b2a57627a.htm" />
+  <HelpKINode Title="NbVotant propri&#233;t&#233;" Url="html/b4baed4b-90e1-cc6c-72c3-441d24ed5f4d.htm" />
+  <HelpKINode Title="NbVote propri&#233;t&#233;" Url="html/0d671bef-fa1e-719a-06c0-02c2768b195d.htm" />
+  <HelpKINode Title="nombreDeVotant propri&#233;t&#233;" Url="html/74369824-c0d8-627b-1ca1-13aea96f4d82.htm" />
+  <HelpKINode Title="nomSondage propri&#233;t&#233;">
+    <HelpKINode Title="AfficheVote.nomSondage Propri&#233;t&#233; " Url="html/5389f8d1-9618-605f-9970-87d1dbe194df.htm" />
+    <HelpKINode Title="Lien.nomSondage Propri&#233;t&#233; " Url="html/6bc2e245-b1c6-4cdf-c001-916ae79419e9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="nomSondagePourModel propri&#233;t&#233;" Url="html/832afa7a-5036-a7b6-1d1a-12d5151ca15d.htm" />
+  <HelpKINode Title="numChoix propri&#233;t&#233;" Url="html/2409df5f-7665-5bbf-372c-9a2d53759248.htm" />
+  <HelpKINode Title="numSondage propri&#233;t&#233;" Url="html/3d7a385d-2515-c516-b656-32064a6a120f.htm" />
+  <HelpKINode Title="numSondagePourModel propri&#233;t&#233;" Url="html/52ffade8-6a02-dc50-5a24-2db30f21a598.htm" />
+  <HelpKINode Title="numVotant propri&#233;t&#233;" Url="html/f323a91b-4203-8667-3d4f-9caedf4f24e3.htm" />
+  <HelpKINode Title="pourcentageParChoixPourModel propri&#233;t&#233;" Url="html/6d6385d7-c5c6-6579-dcd0-78855a0c2bf4.htm" />
+  <HelpKINode Title="RechercheEtDesactivationSondage m&#233;thode" Url="html/cefed9e4-95b2-f4e4-f9eb-e0f61cd10ddf.htm" />
+  <HelpKINode Title="Rechercher m&#233;thode" Url="html/19c8cdb9-52ad-497d-22b8-a586cb7c7196.htm" />
+  <HelpKINode Title="Redirectionresultat propri&#233;t&#233;" Url="html/8aef63a7-dcea-f4ca-195b-ddb94ad38d46.htm" />
+  <HelpKINode Title="RegisterRoutes m&#233;thode" Url="html/63df3ecc-0fc9-1632-4528-372e96ae0ffd.htm" />
+  <HelpKINode Title="RequeteAjoutSqlSondage m&#233;thode" Url="html/6d9833a1-c584-7a0b-5369-6a88264fa67d.htm" />
+  <HelpKINode Title="RequeteSqlDepotDesVotesMultiple m&#233;thode" Url="html/f6f820ee-966f-0eeb-c4f3-a541fdbf6bee.htm" />
+  <HelpKINode Title="RequeteSqlDepotvotant m&#233;thode" Url="html/0d15f2fe-6cc5-4d72-12fd-247c4b7cf640.htm" />
+  <HelpKINode Title="RequeteSqlPourCamembert m&#233;thode" Url="html/62b74e6f-dade-f0b4-f4c8-d520694b4ed9.htm" />
+  <HelpKINode Title="RequeteSqlRecupListeChoixetIdetNbVote m&#233;thode" Url="html/7b98edab-1e62-1817-356a-5d16e29da935.htm" />
+  <HelpKINode Title="RequeteSqlRecupNbVotant m&#233;thode" Url="html/6a903f4e-e9a0-2e6a-3575-73572d366c79.htm" />
+  <HelpKINode Title="RequeteSqlUpdateType m&#233;thode" Url="html/073a8c9e-64c7-acb6-44ef-541eeba537d6.htm" />
+  <HelpKINode Title="RequetteAjoutSqlChoix m&#233;thode" Url="html/44c237b8-c6d2-1bb1-9c36-ab98ebcf8ae2.htm" />
+  <HelpKINode Title="RequetteAjoutSqlLienSuppr m&#233;thode" Url="html/8bc575e9-63d4-47cf-b803-eaa323862d6d.htm" />
+  <HelpKINode Title="RouteConfig classe">
+    <HelpKINode Title="RouteConfig Classe" Url="html/75146576-3f8b-73dd-9d4e-e33d9aedb6b4.htm" />
+    <HelpKINode Title="constructeur" Url="html/123a9bfd-9691-2c30-66a1-1f13ef2d749b.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/40f02acf-7a65-8ae9-4065-3bf006b8e0a8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RouteConfig.RegisterRoutes m&#233;thode" Url="html/63df3ecc-0fc9-1632-4528-372e96ae0ffd.htm" />
+  <HelpKINode Title="RouteConfig.RouteConfig constructeur" Url="html/123a9bfd-9691-2c30-66a1-1f13ef2d749b.htm" />
+  <HelpKINode Title="SONDAGEDESACTIVE champ" Url="html/caac966d-1734-161d-95a1-cb3d5c946ee8.htm" />
+  <HelpKINode Title="SQlConnectString champ" Url="html/91a14809-aabe-67f8-2f08-729d67c201a6.htm" />
+  <HelpKINode Title="Submit m&#233;thode" Url="html/b4c13191-cb9e-638a-e6b2-fb4ffb11eef3.htm" />
+  <HelpKINode Title="SubmitVote m&#233;thode" Url="html/2699fe2c-ed36-2a65-7ff7-018b750d1dda.htm" />
+  <HelpKINode Title="Suppression m&#233;thode" Url="html/5f8e0b3a-547c-c14d-3751-897f13fe37d1.htm" />
+  <HelpKINode Title="TestSiVoteDesactive m&#233;thode" Url="html/53674d87-2b88-6864-06f8-202a903995e9.htm" />
+  <HelpKINode Title="TypeSondage propri&#233;t&#233;" Url="html/965d01d5-ecc0-75a7-0f7d-c8db568b2c5e.htm" />
+  <HelpKINode Title="typeSondage propri&#233;t&#233;" Url="html/6bafc53b-cd92-607c-f34c-41f24ef06ea0.htm" />
+  <HelpKINode Title="Vote classe">
+    <HelpKINode Title="Vote Classe" Url="html/fceaafe9-b46b-d5be-c196-55e0278b3047.htm" />
+    <HelpKINode Title="constructeur" Url="html/7a92a4fb-3cf6-501e-fc27-0cb5adad2718.htm" />
+    <HelpKINode Title="m&#233;thodes" Url="html/a26f2e14-3164-188c-ec76-f8d3aad9032e.htm" />
+    <HelpKINode Title="propri&#233;t&#233;s" Url="html/6e14059f-19a6-dbab-bffa-f679d6e074a2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Vote m&#233;thode" Url="html/04c4aa3d-17ef-8c1f-a85d-e49e3574494d.htm" />
+  <HelpKINode Title="Vote.NbVotant propri&#233;t&#233;" Url="html/b4baed4b-90e1-cc6c-72c3-441d24ed5f4d.htm" />
+  <HelpKINode Title="Vote.NbVote propri&#233;t&#233;" Url="html/0d671bef-fa1e-719a-06c0-02c2768b195d.htm" />
+  <HelpKINode Title="Vote.numChoix propri&#233;t&#233;" Url="html/2409df5f-7665-5bbf-372c-9a2d53759248.htm" />
+  <HelpKINode Title="Vote.numVotant propri&#233;t&#233;" Url="html/f323a91b-4203-8667-3d4f-9caedf4f24e3.htm" />
+  <HelpKINode Title="Vote.Vote constructeur" Url="html/7a92a4fb-3cf6-501e-fc27-0cb5adad2718.htm" />
+  <HelpKINode Title="voteParChoixPourModel propri&#233;t&#233;" Url="html/1b1e8dc6-d980-425e-29d6-91584faf25fd.htm" />
+</HelpKI>

@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DCSONDAGE V1</name>
+    </assembly>
+    <members>
+        <member name="M:DCSONDAGE_V1.Controllers.BigController.Brother(System.Int32)">
+            <summary>
+            Permet d'instancier la classe AfficheBigBrother
+            Affiche une liste des ip et des votes que les utilisateurs ont fait, en envoyant la vue Big/AffichageResultat
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.Submit(System.String,System.Collections.Generic.List{System.String},System.Int32,System.Int32)">
+            <summary>
+            En cas d'oubli (Titre manquant et/ou qu'un seul choix remplit) on renvoit vers des pages d'erreurs
+            Sinon on enregistre les paramètres en base de données
+            On redirige vers la page /Home/Liens
+            </summary>
+            <param name="titreSondage"></param>
+            <param name="creationChoix"></param>
+            <param name="restrictionSondage"></param>
+            <param name="RadioB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.Liens(System.String)">
+            <summary>
+            Affiche la vue des liens en utilisant une instance anonyme de Lien
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.Vote(System.Int32)">
+            <summary>
+            Teste si le paramètre d'entrée (id) est correct
+            Empêche de voter si il y a un cookie qui porte le nom : Vote+idSondage et que le type du sondage est de type cookie
+            Empêche de voter si il y a la même IP en base de données et que le type du sondage est de type IP
+            Créee une instance d'AfficheVote qui est envoyée avec la vue vote
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.AffichageResultat(System.Int32)">
+            <summary>
+            Teste si le paramètre d'entrée (id) est correct
+            Créée une instance de classe AfficheResultat pour avec les informations necessaires à la création d'un histogramme grâce à la classe chart puis le sauvegarde dans ~/Content/Histogramme.jpeg
+            Créée une instance de classe CreationCamembert avec les informations necessaires à la creation d'un diagramme en secteurs grâce à la classe chart puis le sauvegarde dans ~/Content/DiagrammeEnSecteurs.jpeg
+            Afin d'importer l'image dans la vue
+            Affiche la vue AffichageResultat
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.SubmitVote(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Teste si les paramètres d'entrées (choix, idSondage) sont corrects
+            Ne sauvegarde pas en base de données les votes si il y a un cookie qui porte le nom : Vote+idSondage et que le type du sondage est de type cookie
+            Si il n'y a pas de cookies, il est alors créé afin d'empêcher la possibilité de revoter. On envoie un message à l'utilisteur
+            Ne sauvegarde pas en base de données les votes si il y a la même IP en base de données et que le type du sondage est de type IP
+            Si il n'y a pas l'adresse ip, elle n'est pas présente en base de données pour ce sondage, elle est alors stockée
+            Redirige vers Afficheresultat
+            </summary>
+            <param name="choix"></param>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.Suppression(System.String)">
+            <summary>
+            Teste si le paramètre d'entrée (id) est correct
+            Désactive le sondage le cas écheant
+            Renvoie la vue suppression
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Controllers.HomeController.Rechercher">
+            <summary>
+            Renvoie vers la vue erreur car la fonctionnalité n'est pas implémentée
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:DCSONDAGE_V1.Models.BDD.SQlConnectString">
+            <summary>
+            2 SQL string : une pour le local et une pour le serveur CCI
+            </summary>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteAjoutSqlSondage(System.String,System.Int32)">
+            <summary>
+            Permet d'insérer une question et un type de sondage dans la table Sondage
+            Cette méthode est utilisée par le HomeController / Submit
+            Renvoie l'id du sondage, nouvellement créé (Int32)
+            </summary>
+            <param name="titreSondage"></param>
+            <param name="RadioB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequetteAjoutSqlChoix(System.Int32,System.Collections.Generic.List{System.String})">
+            <summary>
+            Permet d'insérer les différents choix de réponses dans la table Choix
+            Cette méthode est utilisée par le HomeController / Submit
+            </summary>
+            <param name="idSondage"></param>
+            <param name="listechoix"></param>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequetteAjoutSqlLienSuppr(System.Int32,System.Guid)">
+            <summary>
+            Permet d'insérer le Guid de Suppression dans la table Lien
+            Cette méthode est utilisée par le HomeController / Submit
+            </summary>
+            <param name="idSondage"></param>
+            <param name="guidSuppression"></param>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.GetListeChoixetId(System.Int32)">
+            <summary>
+            Permet de créer une instance de la classe AfficheVote
+            En injectant dans 2 listes les noms et ids des choix en lien avec le sondage
+            Cette méthode est utilisée par le HomeController / Vote
+            Renvoie une instance d'AfficheVote
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.GetNomSondage(System.Int32)">
+            <summary>
+            Permet de récupérer la question du sondage
+            Cette méthode est utilisée par le HomeController / Vote
+            Renvoie le nom du sondage (String)
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteSqlDepotvotant(System.String)">
+            <summary>
+            Permet d'insérer l'ip dans la table votant
+            Cette méthode est utilisée par le HomeController / Vote
+            Renvoie l'id du votant, nouvellement créé, lié à l'adresse IP (Int32)
+            </summary>
+            <param name="adresseIp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteSqlRecupListeChoixetIdetNbVote(System.Int32)">
+            <summary>
+             Permet de créer une liste de vote en incluant les choix qui n'ont pas été sélectionnés (votés)
+             On additionne le nombre de votes effectifs afin d'avoir le nombre total de votes
+             Puis on calcule le pourcentage de chaque choix (même ce qui n'ont reçu aucun vote)
+             Cette méthode est utilisée par le HomeController / AffichageResultat
+             Renvoie une instance d'AfficheResultat
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteSqlDepotDesVotesMultiple(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Permet d'insérer les votes et l'id du votant dans la table Vote
+            Cette méthode est utilisée par le HomeController / submitVote
+            </summary>
+            <param name="listeDesVotes"></param>
+            <param name="idDuVotant"></param>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteSqlRecupNbVotant(System.Int32)">
+            <summary>
+            Permet en fonction du type de vote (multiple ou unique) de calculer le nombre de personnes qui ont voté (qui est différent du nombre de vote)
+            Permet en fonction du type de vote (multiple ou unique) de calculer le nombre de votants (qui est différent du nombre de vote)
+            Cette méthode est utilisée par le HomeController / submitVote
+            Renvoie le nombre de votants (Int32)
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RechercheEtDesactivationSondage(System.String)">
+            <summary>
+            Permet de retrouver l'id d'un sondage par le Guid
+            Cette méthode est utilisée par le HomeController / Suppression
+            Renvoie l'id du sondage (Int32)
+            </summary>
+            <param name="GuidSuppr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteSqlUpdateType(System.Int32)">
+            <summary>
+            Permet de mettre à jour le type du sondage, en sondage désactivé dans la table Sondage
+            Cette méthode est utiliséé par la methode BDD.rechercheEtDesactivationSondage
+            </summary>
+            <param name="idSondage"></param>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.TestSiVoteDesactive(System.Int32)">
+            <summary>
+            Permet de tester si le sondage est désactivé
+            Cette méthode est utilisée par le HomeController / Vote et  HomeController / submitVote
+            Renvoie un bolleen
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.RequeteSqlPourCamembert(System.Int32)">
+            <summary>
+            Permet de créer deux listes : une pour les noms des votes et une autre avec leurs pourcentages
+            Cette méthode est utilisée par le HomeController / AfficheResultat
+            Retourne une instance de CreationCamembert
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.GetTypeSondage(System.Int32)">
+            <summary>
+            Permet de trouver le type de sondage
+            Cette méthode est utilisée par le HomeController / Liens et HomeController /Vote, HomeController / SubmitVote et la methode GetListeChoixEtId
+            Renvoie le type du sondage (Int32)
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.GetIdSondageParGuid(System.String)">
+            <summary>
+            Permet de créer une liste de tous les guids en base de donnée et de les comparer avec le guid d'entrée 
+            Cette méthode est utilisée par le HomeController / Liens, HomeController /Vote, HomeController /SubmitVote et la methode GetListeChoixEtId
+            Renvoie l'id du sondage si trouvé sinon renvoi -1 si aucun id n'a été trouvé (Int32)
+            </summary>
+            <param name="GuidSuppr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.GetIp(System.Int32)">
+            <summary>
+            Permet de créer une liste des ip qui ont déjà voté sur un sondage
+            Cette méthode est utilisée par le HomeController / Vote et HomeController / submitVote
+            Renvoie la liste des ip qui ont déjà voté sur un sondage
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.BigBrotherIP(System.Int32)">
+            <summary>
+            Permet de créer une liste des ip et des votes qu'ils ont fait
+            Permet de créer une liste des ip et des votes que les utilisateurs ont fait
+            Cette méthode est utilisée par le BigController / Brother 
+            Renvoie une instance d'AfficheBigBrother
+            </summary>
+            <param name="idSondage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.BDD.GetMaxId">
+            <summary>
+            Permet de chercher l'id MAX de la table Sondage
+            Cette méthode est utilisée par Methodes.isBiggerQueMaxId
+            Renvoie la valeur la plus grande des id sondage
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DCSONDAGE_V1.Models.Methodes.AjoutCookie(System.Int32,System.String)">
+            <summary>
+            creer un cokkie et l'envoi au client
+            cette methodes est utilisé dans HomeController/SubmitVote
+            </summary>
+            <param name="id"></param>
+            <param name="cookiename"></param>
+        </member>
+    </members>
+</doc>
