@@ -13,6 +13,7 @@ namespace DCSONDAGE_V1.Models
         public Int32 numSondagePourModel { get; set; }
         public List <Int32> voteParChoixPourModel { get; set; }
         public List <double> pourcentageParChoixPourModel { get; set; }
+        public Int32 nombreDeVotant { get; set; }
         public AfficheResultat(int idSondage, String nomSondage, List<Int32> listeIdChoix, List<String> listeNomChoix, List<Int32> voteParChoix, List<double> pourcentageParChoix)
         {
             listeNomChoixPourModel = listeNomChoix;
@@ -29,6 +30,10 @@ namespace DCSONDAGE_V1.Models
             numSondagePourModel = idSondage;
             voteParChoixPourModel = voteParChoix;
             pourcentageParChoixPourModel = pourcentageParChoix;
+        }
+        public void AjoutNombreDeVotant(Int32 nbVotant)
+        {
+            nombreDeVotant = nbVotant;
         }
     }
 }

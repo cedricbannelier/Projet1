@@ -153,7 +153,8 @@ namespace DCSONDAGE_V1.Controllers
             {
                 return View("Erreur", (object)"adresse non complete");
             }
-            AfficheResultat affiche2 = BDD.RequeteSqlRecupListeChoixetIdetNbVote(id);
+            AfficheResultat resultatAAfficher = BDD.RequeteSqlRecupListeChoixetIdetNbVote(id);
+            resultatAAfficher.AjoutNombreDeVotant(BDD.RequeteSqlRecupNbVotant(id));
             CreationCamembert camembert = BDD.RequeteSqlPourCamembert(id);
             try
             {
@@ -181,10 +182,10 @@ namespace DCSONDAGE_V1.Controllers
                 Chart histogramme = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Histogramme")
                                                                                            .AddSeries("Default", 
 
-                                                                                                xValue: affiche2.listeNomChoixPourModel,
+                                                                                                xValue: resultatAAfficher.listeNomChoixPourModel,
                                                                                                 xField: "listeNomChoixPourModel", 
 
-                                                                                                yValues: affiche2.pourcentageParChoixPourModel,
+                                                                                                yValues: resultatAAfficher.pourcentageParChoixPourModel,
                                                                                                 yFields: "pourcentageParChoixPourModel")
 
                                                                                             .Save("~/Content/Histogramme.jpeg"); 
@@ -193,8 +194,8 @@ namespace DCSONDAGE_V1.Controllers
             {
                 // le try catche ne fait rien car il est uniquement pour gerrer les cas ou il y a trop de connection en meme temps et que le pc n'a pas le temps de sauvegarder la nouvelle image 
             }
-
-            return View("AffichageResultat", affiche2);
+            
+            return View("AffichageResultat", resultatAAfficher);
         }
         /// <summary>
         /// Teste si les paramètres d'entrées (choix, idSondage) sont corrects

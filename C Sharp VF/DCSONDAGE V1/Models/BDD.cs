@@ -245,7 +245,7 @@ namespace DCSONDAGE_V1.Models
             }
             else
             {
-                SqlCommand requeteSql = new SqlCommand("SELECT COUNT(distinct numVotant) FROM Vote v, choix c WHERE c.numChoix=v.numChoix AND c.numSondage=@idsondage; ", DCConnect);
+                SqlCommand requeteSql = new SqlCommand("SELECT COUNT(DISTINCT numVotant) FROM Vote v, choix c WHERE c.numChoix=v.numChoix AND c.numSondage=@idsondage; ", DCConnect);
                 var idsondageParameter = new SqlParameter("@idsondage", idSondage);
                 requeteSql.Parameters.Add(idsondageParameter);
                 nbVotant = (Int32)requeteSql.ExecuteScalar();
