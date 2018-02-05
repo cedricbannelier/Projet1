@@ -44,14 +44,29 @@
         <h1>Ci-dessous les 3 liens à GARDER</h1>
 
         <div class="row">		
-            <div class="form-group col-lg-3 center">
-
-                <ul>
-                    <li><a href="@Model.adresseLien1">Vote </a>@Model.adresseLien1</li><br/>
-                    <li><a href="@Model.adresseLien2">Resultat </a>@Model.adresseLien2</li><br/>
-                    <li><a href="@Model.adresseLien3">Suppression </a>@Model.adresseLien3</li>
-                </ul>
-
+            <div class="form-group col-lg-10 center">
+				<div class="input-group">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="">Vote</span>
+				  </div>
+				  <input type="text" class="form-control" value=@Model.adresseLien1>
+				</div>
+				<br/>
+					<div class="input-group">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="">Resultat</span>
+				  </div>
+				  <input type="text" class="form-control" value=@Model.adresseLien2>
+				</div>
+				<br/>
+					<div class="input-group">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="">Suppression</span>
+				  </div>
+				  <input type="text" class="form-control" value=@Model.adresseLien3>
+				</div>
+			
+			
             </div>
         </div>
         <br/>
