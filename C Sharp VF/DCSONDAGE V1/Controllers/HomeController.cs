@@ -155,31 +155,44 @@ namespace DCSONDAGE_V1.Controllers
             }
             AfficheResultat affiche2 = BDD.RequeteSqlRecupListeChoixetIdetNbVote(id);
             CreationCamembert camembert = BDD.RequeteSqlPourCamembert(id);
+            try
+            {
+                Chart diagrammeEnSecteurs = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Diagramme en secteurs")
+                                                                                        .AddSeries("Default",
 
-            Chart diagrammeEnSecteurs = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Diagramme en secteurs")
-                                                                                          .AddSeries("Default",
+                                                                                          chartType: "Pie",
 
-                                                                                            chartType: "Pie",// pas changé
+                                                                                          xValue: camembert.listeChoixVote,
+                                                                                          xField: "listeChoixVote", 
 
-                                                                                            xValue: camembert.listeChoixVote,
-                                                                                            xField: "listeChoixVote", // a changer par nomChoix
+                                                                                          yValues: camembert.listePourcentage,
+                                                                                          yFields: "ListePourcentage")
 
-                                                                                            yValues: camembert.listePourcentage,
-                                                                                            yFields: "ListePourcentage")
+                                                                                        .Save("~/Content/DiagrammeEnSecteurs.jpeg");
+            }
+            catch (Exception)
+            {
+                // le try catche ne fait rien car il est uniquement pour gerrer les cas ou il y a trop de connection en meme temps et que le pc n'a pas le temps de sauvegarder la nouvelle image 
+            }
+            
+            try
+            {
 
-                                                                                          .Save("~/Content/DiagrammeEnSecteurs.jpeg"); //  a changer par la sum des votes de chaque choix
-          
-
-            Chart histogramme = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Histogramme")
-                                                                                           .AddSeries("Default", // pas changé
+                Chart histogramme = new Chart(width: 400, height: 400, theme: ChartTheme.Yellow).AddTitle("Histogramme")
+                                                                                           .AddSeries("Default", 
 
                                                                                                 xValue: affiche2.listeNomChoixPourModel,
-                                                                                                xField: "listeNomChoixPourModel", // a changer par nomChoix
+                                                                                                xField: "listeNomChoixPourModel", 
 
                                                                                                 yValues: affiche2.pourcentageParChoixPourModel,
                                                                                                 yFields: "pourcentageParChoixPourModel")
 
-                                                                                            .Save("~/Content/Histogramme.jpeg"); //  a changer par la sum des votes de chaque choix
+                                                                                            .Save("~/Content/Histogramme.jpeg"); 
+            }
+            catch (Exception)
+            {
+                // le try catche ne fait rien car il est uniquement pour gerrer les cas ou il y a trop de connection en meme temps et que le pc n'a pas le temps de sauvegarder la nouvelle image 
+            }
 
             return View("AffichageResultat", affiche2);
         }
